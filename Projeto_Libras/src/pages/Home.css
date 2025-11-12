@@ -1,0 +1,247 @@
+:root {
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  --indigo-100: #E0E7FF;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+}
+
+/* ---------- GERAL ---------- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blue-50);
+  color: var(--gray-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: var(--blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  height: 4rem;
+  width: 75.6rem;
+  position: fixed;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 0.5rem;
+}
+
+.header-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--gray-700);
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--blue-700);
+}
+
+/* ---------- BANNER ---------- */
+.banner {
+    background: linear-gradient(to bottom right, var(--blue-50), var(--indigo-100));
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner #pp {
+    font-size: 1.5rem;
+}
+
+.banner-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.banner #h {
+  font-size: 4.5rem;
+  margin-bottom: 8px;
+  line-height: 5.2rem;
+}
+
+.banner #c {
+    color: var(--blue-600)
+}
+
+.highlight {
+  color: var(--blue-700);
+}
+
+.badge {
+  background-color: var(--blue-200);
+  color: var(--blue-700);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.banner-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.cta-button {
+  background-color: var(--blue-600);
+  color: var(--white);
+  border: none;
+  padding: 18px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: var(--blue-700);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(173, 170, 170, 0.2);
+}
+
+/* ---------- INTRO ---------- */
+.intro-section {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--gray-900);
+}
+
+/* ---------- INCLUSÃO ---------- */
+.inclusao-section {
+  background-color: var(--blue-600);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  width: 85%;
+}
+
+.inclusao-badges span {
+  display: inline-block;
+  margin: 6px;
+  background-color: var(--blue-700);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* ---------- FEATURES ---------- */
+.features-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.feature-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: var(--blue-800);
+  color: var(--white);
+  padding: 40px 60px;
+}
+
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 70px;
+}
+
+.footer-desc {
+  margin-top: 10px;
+  color: #dbeafe;
+  max-width: 500px;
+}
+
+.footer-badges span {
+  display: inline-block;
+  background-color: var(--blue-700);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--blue-700);
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 10px;
+  color: #c7d2fe;
+  font-size: 0.9rem;
+}
+
+.cem {
+    height: 70px;
+    width: 90px;
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--gray-600);
+    font-size: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.sem {
+    color: var(--blue-600);
+    font-size: 20px;
+}
+
+.aces {
+    height: 70px;
+    width: 90px;
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--gray-600);
+    font-size: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.libra {
+    height: 70px;
+    width: 90px;
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--gray-600);
+    font-size: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
