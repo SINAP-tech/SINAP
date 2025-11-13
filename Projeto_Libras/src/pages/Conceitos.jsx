@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Cabecalho from "../components/Cabecalho";
 import Videos from '../components/videos'
-import './conceitos.css';
+import './Conceitos.css';
 
 export default function Conceitos() {
     return(

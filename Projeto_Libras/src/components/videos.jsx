@@ -1,5 +1,5 @@
 import React from "react";
-import '../pages/conceitos.css'
+import '../pages/Conceitos.css'
 
 export default function videos() {
     return (
