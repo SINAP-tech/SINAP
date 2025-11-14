@@ -1,0 +1,121 @@
+body {
+    background: #EFF6FF;
+    font-family: Inter, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Card centralizado */
+.form-container {
+    background: #ffffff;
+    max-width: 620px;              /* mesma largura do print */
+    margin: 60px auto;             /* centralizado com respiro */
+    padding: 36px;
+    border-radius: 14px;           /* bem arredondado igual ao print */
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    border: 1px solid #E2E8F0;     /* borda quase invisível igual ao print */
+}
+
+/* Título */
+.form-container h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 28px;
+}
+
+/* Linha com nome + e-mail */
+.row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+/* Campo individual */
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+label {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+/* Inputs e selects */
+input,
+select,
+textarea {
+    padding: 13px 14px;
+    border-radius: 10px;                  /* mais arredondado */
+    border: 1px solid #CBD5E1;
+    font-size: 15px;
+    background: #ffffff;
+    outline: none;
+    transition: 0.15s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3B82F6;
+    box-shadow: 0px 0px 0px 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Select */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23667' viewBox='0 0 20 20'%3E%3Cpath d='M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+}
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Checkbox */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0 26px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    background: #1D4ED8;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #2563EB;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}

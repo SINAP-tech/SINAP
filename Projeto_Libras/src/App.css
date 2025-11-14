@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #152f8e, #1d36b3);
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+
+.info h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.info p {
+  margin: 0;
+  font-size: 14px;
+  color: #b8c4ff;
+}
+
+/* Texto principal */
+.main p {
+  margin-top: 20px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Tags */
+.tags {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.acessivel {
+  background-color: rgba(46, 204, 113, 0.25);
+}
+
+.libras {
+  background-color: rgba(52, 152, 219, 0.25);
+}
+
+.gratuito {
+  background-color: rgba(241, 196, 15, 0.25);
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  color: #cfd7ff;
+}
+
+.footer p {
+  margin: 10px 0 0 0;
+}

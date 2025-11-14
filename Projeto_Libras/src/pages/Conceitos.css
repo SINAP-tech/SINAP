@@ -1,0 +1,31 @@
+:root {
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  --indigo-100: #E0E7FF;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blue-50);
+  color: var(--gray-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+.cabeca {
+    background: linear-gradient(to bottom right, var(--blue-50), var(--indigo-100));
+    text-align: center;
+    padding: 60px 20px;
+}
