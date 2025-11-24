@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/Home.css";
+import logoBanner from "../assets/logo-banner.png";
 
 function Banner() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ function Banner() {
   return (
     <section className="banner">
       <div className="banner-content">
+        <img src={logoBanner} alt="Logo Banner SINAP" className="banner-logo" />
         <div className="banner-text">
           <span className="badge">🎓 Educação Digital Inclusiva</span>
           <h1 id='h'>
