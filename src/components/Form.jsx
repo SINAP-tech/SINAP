@@ -7,7 +7,6 @@ export default function Form(){
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [opcao, setOpcao] = useState('');
-    const [aceito, setAceito] = useState(false);
 
     function enviarFormulario(e){
         e.preventDefault();
@@ -15,16 +14,10 @@ export default function Form(){
         console.log("Email:", email);
         console.log("Mensagem:", mensagem);
         console.log("Opção selecionada:", opcao);
-        console.log("Confirmou caixa:", aceito);
 
-        
-        if (!aceito) {
-            alert("Você precisa confirmar antes de enviar.");
-        return;
-        }
-
+    
         alert("Formulário enviado com sucesso! 🚀");
-        }
+}
     
     return(
         <>
@@ -47,18 +40,18 @@ export default function Form(){
             <label className="Label">
                 <select value={opcao} onChange={(e) => setOpcao(e.target.value)} >
                     <option value="">Selecione o assunto</option>
-                    <option value="">Dúvida sobre o conteúdo</option>
-                    <option value="">Problema Técnico</option>
-                    <option value="">Sugestão de Conteúdo</option>
-                    <option value="">Colaboração</option>
-                    <option value="">Outros</option>
+                    <option value="Dúvida sobre o conteúdo">Dúvida sobre o conteúdo</option>
+                    <option value="Problema Técnico">Problema Técnico</option>
+                    <option value="Sugestão de Conteúdo">Sugestão de Conteúdo</option>
+                    <option value="Colaboração">Colaboração</option>
+                    <option value="Outros">Outros</option>
                 </select>
             </label>
 
             <br />
             <p>Mensagem</p>
             <label className="LabelMensagem">
-                <input type="mensagem" onChange={(e) => setMensagem(e.target.value)} placeholder="escreva sua mensagem aqui..." className="mesage" />
+                <textarea type="mensagem" onChange={(e) => setMensagem(e.target.value)} placeholder="escreva sua mensagem aqui..." className="mesage" />
             </label>
             <br />
             <div>
