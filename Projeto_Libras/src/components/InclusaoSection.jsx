@@ -1,9 +1,11 @@
 import React from "react";
 import "../pages/Home.css";
+import logoBanner from "../assets/logo-banner.png";
 
 function InclusaoSection() {
   return (
     <section className="inclusao-section">
+      <img src={logoBanner} alt="Logo Banner SINAP" className="banner-logo" />
       <h3>🤟 Inclusão em Libras</h3>
       <p>
         Aqui você aprende conceitos de informática também em Língua Brasileira
