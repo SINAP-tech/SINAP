@@ -1,0 +1,102 @@
+.formulario {
+    max-width: 600px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.escreva {
+    gap: 30px;
+    display: flex;
+    size: 15%;
+    flex-direction:row;
+    margin-top: 10%;
+}
+
+label {
+    gap: 20px;
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 6px;
+    width: 500px;
+}
+
+
+/* Inputs e selects */
+input,
+select,
+textarea {
+    padding: 13px 14px;
+    border-radius: 10px;                  /* mais arredondado */
+    border: 1px solid #a2c1e7;
+    font-size: 15px;
+    background: #ffffff;
+    transition: 0.15s;
+    gap: 30px;
+    width: 250px;
+}
+.LabelMensagem {
+    width: 300px;
+    height: 150px;
+}
+.mesage{
+    height: 150px;
+    width: 300px;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3B82F6;
+    box-shadow: 0px 0px 0px 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Select */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23667' viewBox='0 0 20 20'%3E%3Cpath d='M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+}
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Checkbox */
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    background: #1D4ED8;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #2563EB;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+}

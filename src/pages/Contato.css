@@ -1,0 +1,101 @@
+/* Fundo geral */
+.pagina-contato {
+    background: #EFF6FF;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Título principal */
+.titulo-bloco {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.titulo-bloco h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.titulo-bloco p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Layout principal */
+.conteudo {
+    display: flex;
+    gap: 30px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Formulário */
+.form-bloco {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #c8ddff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    height: 700px;
+}
+
+.form-bloco h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Coluna direita */
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+/* Caixas */
+.caixa {
+    background: white;
+    border: 1px solid #c8ddff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+}
+
+.caixa h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.caixa p {
+    margin-bottom: 12px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.caixa ul {
+    margin-left: 20px;
+    color: #444;
+}
+
+.sub {
+    color: gray;
+}
+
+/* Linha com ícone + texto */
+.linha {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.icone {
+    width: 28px;
+    height: 28px;
+}
