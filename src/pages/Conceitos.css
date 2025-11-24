@@ -29,3 +29,180 @@ body {
     text-align: center;
     padding: 60px 20px;
 }
+/* videos */
+.pag {
+  background-color: #f1f7ff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 22px;
+  margin: 0;
+  color: #002b80;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.descricao {
+  color: #555;
+  font-size: 16px;
+}
+
+.video-box {
+  background-color: #e6f0ff;
+  border-radius: 12px;
+  padding: 40px 0;
+  text-align: center;
+  color: #0040b0;
+  font-weight: 500;
+}
+
+.libra-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.topicos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topicos-titulo {
+  font-weight: bold;
+  color: #003380;
+}
+
+.lista-topicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topico-tag {
+  background-color: #d9e6ff;
+  color: #0040b0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.btn-libras {
+  background-color: #0057ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-libras:hover {
+  background-color: #003fd1;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* ======= Seção Recursos Adicionais ======= */
+.extra-secao {
+  margin-top: 60px;
+  background: #f0f6ff;
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.extra-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #002b80;
+  margin-bottom: 40px;
+}
+
+.extra-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.extra-item {
+  width: 250px;
+  text-align: center;
+}
+
+.extra-item h3 {
+  font-size: 18px;
+  color: #002b80;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.extra-item p {
+  color: #555;
+  font-size: 14px;
+}
+
+.extra-icon {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #e1ecff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  margin: 0 auto;
+}
