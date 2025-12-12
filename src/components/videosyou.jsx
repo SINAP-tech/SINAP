@@ -1,7 +1,8 @@
 import React from "react"
 import './videoCSS.css';
+import { Link } from "react-router-dom";
 
-export default function Videosyou({titulo, descricao, topicos, videoUrl}){
+export default function Videosyou({titulo, descricao, topicos, videoUrl, caminho}){
     let embedURL = videoUrl;
 
         if (videoUrl.includes("watch?v=")) {
@@ -39,7 +40,7 @@ export default function Videosyou({titulo, descricao, topicos, videoUrl}){
                 ))}
             </div>
 
-            <button className="btn-libras">Assistir</button>
+            <button className="btn-libras"><Link to={caminho}>Veja tudo aqui</Link></button>
         </div>
 
     )

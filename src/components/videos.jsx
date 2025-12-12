@@ -3,26 +3,27 @@ import './JogosCSS.css';
 import Videosyou from "./videosyou";
 
 export default function Videos() {
-
-  // CORREÇÃO: “videoUrl” agora está escrito certo
   const VideosData = [
     {
       titulo: 'Hardware',
       descricao: 'Conheça os componentes físicos do computador',
       topicos: ['Placa-mãe', 'Processador', 'Memória RAM', 'SSD/HD'],
-      videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls'
+      videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls',
+      caminho: '/hardwarevideos'
     },
     {
       titulo: 'Software',
       descricao: 'Entenda os programas e os sistemas operacionais (S.O)',
       topicos: ['Windows x Linux', 'Aplicativos', 'Drivers'],
-      videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10'
+      videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
+      caminho:'/softwarevideos'
     },
     {
       titulo: 'Internet',
       descricao: 'Aprenda o que é navegar na internet e o que significa WWW',
       topicos: ['Navegadores', 'E-mail', 'Redes Sociais', 'Segurança'],
-      videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE'
+      videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE',
+      caminho: '/internetvideos'
     }
   ];
 
@@ -36,6 +37,7 @@ export default function Videos() {
             descricao={video.descricao}
             topicos={video.topicos}
             videoUrl={video.videoUrl}
+            caminho={video.caminho}
           />
         ))}
       </div>
