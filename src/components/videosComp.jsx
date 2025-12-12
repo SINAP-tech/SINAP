@@ -1,8 +1,7 @@
 import React from "react"
-import './videoCSS.css';
-import { Link } from "react-router-dom";
+// import './videoCSS.css';
 
-export default function Videosyou({titulo, descricao, videoUrl, caminho}){
+export default function VideoComp({titulo, descricao, topicos, videoUrl}){
     let embedURL = videoUrl;
 
         if (videoUrl.includes("watch?v=")) {
@@ -33,7 +32,14 @@ export default function Videosyou({titulo, descricao, videoUrl, caminho}){
                 allowFullScreen
                 ></iframe>
             </div>
-            <button className="btn-libras"><Link to={caminho} className="textbtn">Veja tudo aqui</Link></button>
+            <div className="topicos">
+                <p className="topicos-titulo">Tópicos abordados: </p>
+                {topicos.map((item, index) => (
+                    <span key={index} className="topico-tag">{item}</span>
+                ))}
+            </div>
+
+            <button className="btn-libras">Assistir</button>
         </div>
 
     )

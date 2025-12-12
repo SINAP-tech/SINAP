@@ -1,35 +1,76 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import VideoComp from "../components/videosComp";
+import '../components/videoCSS.css'
 
 export default function Hardware(){
     const VideosData = [
     {
-      titulo: 'Hardware',
-      descricao: 'Conheça os componentes físicos do computador',
-      topicos: ['Placa-mãe', 'Processador', 'Memória RAM', 'SSD/HD'],
-      videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls'
+      titulo: 'Placa-mãe',
+      descricao: 'Saiba como falar "placa-mãe" e o que ela é.',
+      topicos: ['Placa-mãe', 'Tipos e tamanhos'],
+      videoUrl: ''
     },
     {
-      titulo: 'Software',
-      descricao: 'Entenda os programas e os sistemas operacionais (S.O)',
-      topicos: ['Windows x Linux', 'Aplicativos', 'Drivers'],
-      videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10'
+      titulo: 'Armazenamento, SSD, HD',
+      descricao: 'Entenda como falar o nome das memórias e como elas funcionam.',
+      topicos: ['Temporária', 'Permanente'],
+      videoUrl: ''
     },
     {
-      titulo: 'Internet',
-      descricao: 'Aprenda o que é navegar na internet e o que significa WWW',
-      topicos: ['Navegadores', 'E-mail', 'Redes Sociais', 'Segurança'],
-      videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE'
-    }
-  ];
+      titulo: 'Processador CPU',
+      descricao: 'Aprenda como funciona o processador.',
+      topicos: ['Cores', 'Frequencia'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Memória RAM',
+      descricao: 'Aprenda o que é uma memória volátio.',
+      topicos: ['Tamanho', 'Dual-Channel'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Periféricos',
+      descricao: 'Aprenda o que são periféricos e exemplos.',
+      topicos: ['Mouse', 'teclado'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Placa de vídeo',
+      descricao: 'O que são e para que servem',
+      topicos: ['Espaço Própio', 'GPU'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Fonte de Alimentação',
+      descricao: 'O que é e sua importância.',
+      topicos: ['Voltagem', 'Recomendações'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Gabinete',
+      descricao: 'Saiba o que é e para que serve.',
+      topicos: [''],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Dispositivos de Entrada e saída',
+      descricao: 'Saiba o que significa e exemplos.',
+      topicos: ['Microfone, teclado'],
+      videoUrl: ''
+    },
+]
 
     return(
         <>
         <Header/>
+        <div className="introducaoo">
+        <h1>Veja tudo sobre os hardwares aqui!</h1>
+        </div>
         <div className="card-wrapper">
                 {VideosData.map((video, index) => (
-                  <Videosyou
+                  <VideoComp
                     key={index}
                     titulo={video.titulo}
                     descricao={video.descricao}
@@ -71,5 +112,5 @@ export default function Hardware(){
 
         /* ok, pensa, ce precisa de uma tela que mostre os videos naquela estrutura, ou seja, ce precisa salvar aquela estrutura em o projeto e depois 
         modificar para receber os caminhos para vir os caminhos, salva aqui a estrutura dos videos modifico a estrutura e retiro o objeto*/
-    )     
-}
+    )
+} 
