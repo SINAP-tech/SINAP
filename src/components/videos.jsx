@@ -1,12 +1,8 @@
-import React, { useState } from "react";
 import './JogosCSS.css';
 import Videosyou from "./videosyou";
-import SearchBar from "./barrapesquisa";
 
 export default function Videos() {
-  /* Aqui ta criando a const pra barra de pesquisa. */
-  const [busca, setBusca] = useState("");
-  /*Listando pra não precisar substituir tudo, chamar o componente várias vezes. */
+
   const VideosData = [
     {
       titulo: 'Hardware',
@@ -28,44 +24,10 @@ export default function Videos() {
     }
   ];
 
-  // normaliza texto: remove acentos e deixa tudo lowercase
-  const normalize = (str = "") =>
-    str
-      .normalize("NFD")            // separa letras + diacríticos
-      .replace(/[\u0300-\u036f]/g, "") // remove diacríticos
-      .toLowerCase();
-
-  const q = normalize(busca.trim());
-
-  const videosFiltrados = VideosData.filter(video => {
-    if (!q) return true; // se busca vazia, mostra todos
-
-    // normaliza título e descrição
-    const titulo = normalize(video.titulo);
-    const descricao = normalize(video.descricao || "");
-
-    // verifica se algum tópico combina
-    const topicosMatch = (video.topicos || []).some(t =>
-      normalize(t).includes(q)
-    );
-
-    return (
-      titulo.includes(q) ||
-      descricao.includes(q) ||
-      topicosMatch
-    );
-  });
-
   return (
     <>
-      {/* Barra de pesquisa */}
-      <div style={{ width: "100%", display: "flex", justifyContent: "center", margin: "20px 0" }}>
-        <SearchBar onSearch={(texto) => setBusca(texto)} />
-      </div>
-
-      {/* Lista de vídeos filtrados */}
       <div className="card-wrapper">
-        {videosFiltrados.map((video, index) => (
+        {VideosData.map((video, index) => (
           <Videosyou
             key={index}
             titulo={video.titulo}

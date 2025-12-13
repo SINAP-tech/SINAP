@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
 import '../components/videoCSS.css'
+import SearchBar from "../components/barrapesquisa";
+
 
 export default function Internet(){
+   /* Aqui ta criando a const pra barra de pesquisa. */
+    const [busca, setBusca] = useState("");
+
     const VideosData = [
     {
       titulo: 'O que é Software?',
@@ -62,23 +67,37 @@ export default function Internet(){
     },
 ]
 
+  // normaliza texto (remove acento e caixa)
+  const normalize = (str = "") =>
+    str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+  const q = normalize(busca.trim());
+
+  const videosFiltrados = VideosData.filter(video => {
+    if (!q) return true; // busca vazia → mostra tudo
+
+    return (
+      normalize(video.titulo).includes(q) ||
+      normalize(video.descricao).includes(q) ||
+      video.topicos.some(t => normalize(t).includes(q))
+    );
+  });
+
     return(
         <>
         <Header/>
-        <div className="introducaoo">
-        <h1>Veja tudo sobre a Internet aqui!</h1>
-        </div>
-        <div className="card-wrapper">
-                {VideosData.map((video, index) => (
-                  <VideoComp
-                    key={index}
-                    titulo={video.titulo}
-                    descricao={video.descricao}
-                    topicos={video.topicos}
-                    videoUrl={video.videoUrl}
-                  />
+         {/* 🔍 Barra de pesquisa */}
+              <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+                <SearchBar onSearch={setBusca} />
+              </div>
+        
+              {/* Cards filtrados */}
+              <div className="card-wrapper">
+                {videosFiltrados.map((video, index) => (
+                  <VideoComp key={index} {...video} />
                 ))}
               </div>
+      
         
               {/* SEÇÃO EXTRA */}
               <div className="extra-secao">
