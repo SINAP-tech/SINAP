@@ -1,3 +1,5 @@
+
+/*  As cores ai ó, ó as cor aeeee */
 :root {
   --blue-50: #EFF6FF;
   --blue-100: #DBEAFE;
@@ -15,7 +17,7 @@
   --white: #FFFFFF;
 }
 
-/* ---------- GERAL ---------- */
+/* ---------- GERAL ----------  ai tem os bagui la tlg?*/
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: var(--blue-50);
@@ -31,9 +33,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 50px;
-  height: 4rem;
-  width: 190vh;
+  height: 5rem;
+  width: 100%;
   position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  
 }
 
 .header-left {

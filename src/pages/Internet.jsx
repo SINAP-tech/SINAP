@@ -12,57 +12,57 @@ export default function Internet(){
 
     const VideosData = [
     {
-      titulo: 'O que é Software?',
-      descricao: 'Entenda o conceito de internet',
-      topicos: ['WWW', 'HTTPS'],
+      titulo: 'O que é a Internet',
+      descricao: 'Entenda o que é a internet.',
+      topicos: ['WWW', 'HTTP'],
       videoUrl: ''
     },
     {
-      titulo: 'Sistemas Operacionais(S.O).',
-      descricao: 'Entenda o que é um e recomendações.',
-      topicos: ['Linux x Windows', 'Mac x Windows'],
+      titulo: 'Navegadores',
+      descricao: 'Como navegar por essa grande rede?',
+      topicos: ['Brave', 'Chrome'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'E-mails e comunicação',
+      descricao: 'As formas de se comunicar pela internet',
+      topicos: ['Chats', 'App'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Cookies e Privacidade.',
+      descricao: 'Seu rastreamento na internet, publicidade e anúncio.',
+      topicos: ['Dados', 'Privacidade'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Fake News',
+      descricao: 'As mentiras da internet.',
+      topicos: ['Mentiras', 'Click Bait'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Pishing',
+      descricao: 'Desconfie dos links que recebe.',
+      topicos: ['Link falso', 'Letras'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Sites e URls',
+      descricao: 'O que é um site?',
+      topicos: ['Sites', 'App x Site'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Segurança',
+      descricao: 'Segurança em primeiro lugar!',
+      topicos: ['VPN', 'Proxy'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Dark e Deep Web',
+      descricao: 'Os lugares mais obscuros da internet...',
+      topicos: ['Dark Web', 'Deep Web '],
       videoUrl: ''
     },
 ]

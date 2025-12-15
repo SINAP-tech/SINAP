@@ -12,57 +12,57 @@ export default function Softwares(){
   
     const VideosData = [
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'O que é Software?',
+      descricao: 'Aplicativos são softwares, entenda.',
+      topicos: ['Chrome', 'Excel'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Sistemas Operacionais(S.O).',
+      descricao: 'Entenda o que é um e recomendações.',
+      topicos: ['Linux x Windows', 'Mac x Windows'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Drivers',
+      descricao: 'Tradutor dos softwares.',
+      topicos: ['O que faz', 'Importância'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Atualizações e patches.',
+      descricao: 'Correções e atualizações.',
+      topicos: ['Bugs', 'Melhorias'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Programas de segurança.',
+      descricao: 'Aprenda sobre os programas de segurança.',
+      topicos: ['Anti-vírus', 'Malware'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Licenças',
+      descricao: 'Aprenda sobre licenças e para que servem.',
+      topicos: ['Software Livre', 'Código fechado'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Interface do usuário(U.I).',
+      descricao: 'Aprenda sobre interfaces.',
+      topicos: ['Menus', 'Ícones'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Compatibilidade dos App.',
+      descricao: 'Requisitos mínimos para utilizar um app.',
+      topicos: ['Requisitos do sistema', 'Requisitos de hardware'],
       videoUrl: ''
     },
     {
-      titulo: '',
-      descricao: '',
-      topicos: [''],
+      titulo: 'Programas em Segundo Plano.',
+      descricao: 'Sobre o consumo de memória RAM.',
+      topicos: ['CPU', 'RAM'],
       videoUrl: ''
     },
 ]

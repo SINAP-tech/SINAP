@@ -8,10 +8,12 @@ import './Conceitos.css';
 export default function Conceitos() {
     return(
         <>
+        <div className="home">
         <Header />
         <Cabecalho />
         <Videos />
         <Footer />
+        </div>
         </>
     )
 }

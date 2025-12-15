@@ -25,6 +25,7 @@
   flex-direction: column;
   gap: 15px;
   transition: transform .2s ease;
+  
 }
 
 .card:hover {
