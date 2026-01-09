@@ -65,6 +65,12 @@ export default function Hardware(){
       topicos: ['Microfone, teclado'],
       videoUrl: ''
     },
+    {
+      titulo: 'Vídeo interessante',
+      descricao: 'Dá para usar, um pouco, de base para os vídeos que vamos produzir.',
+      topicos: ['Microfone, teclado'],
+      videoUrl: 'https://www.youtube.com/watch?v=31kQ9YxWZH0'
+    },
 ]
   // normaliza texto (remove acento e caixa)
   const normalize = (str = "") =>

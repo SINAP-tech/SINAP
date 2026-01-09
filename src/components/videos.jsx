@@ -16,6 +16,8 @@ export default function Videos() {
       videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
       caminho:'/softwarevideos'
     },
+    //Po, esse vídeo é muito bom, ele ta apresentando diversos conteúdos que vamos por aqui,
+    // que coisa boa, oh homi de Deus. Espero que não seja necessário imitar a boca dele...
     {
       titulo: 'Internet',
       descricao: 'Aprenda sobre a internet e o que significa WWW',

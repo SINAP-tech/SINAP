@@ -8,6 +8,7 @@ import SearchBar from "../components/barrapesquisa";
 
 export default function Softwares(){
    /* Aqui ta criando a const pra barra de pesquisa. */
+   //Espero que funcione com vídeos listados...
     const [busca, setBusca] = useState("");
   
     const VideosData = [
