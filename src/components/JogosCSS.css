@@ -1,271 +1,220 @@
-/* ------------------------------ */
-/* PALETA IGUAL AO LAYOUT GERAL  */
-/* ------------------------------ */
 :root {
-  --blue-50: #EFF6FF;
-  --blue-100: #DBEAFE;
-  --blue-200: #BFDBFE;
-  --blue-300: #93C5FD;
-  --blue-400: #60A5FA;
-  --blue-600: #2563EB;
-  --blue-700: #1D4ED8;
-  --blue-800: #1E40AF;
-  --blue-900: #1E3A8A;
-  --indigo-100: #E0E7FF;
-  --gray-600: #4B5563;
-  --gray-700: #374151;
-  --gray-900: #111827;
-  --white: #FFFFFF;
+  --blue-primary: #2563EB;
+  --blue-hover: #1D4ED8;
+  --bg-page: #f0f4ff;
+  --white: #ffffff;
+  --text-dark: #111827;
+  --text-gray: #4B5563;
 }
 
-/* ------------------------------ */
-/* GERAL                          */
-/* ------------------------------ */
 .jogos-wrapper {
   width: 100%;
-  background-color: var(--blue-50);
-  padding-top: 60px;
-  padding-bottom: 60px;
-  font-family: "Segoe UI", sans-serif;
-  color: var(--gray-900);
+  background-color: var(--bg-page);
+  padding: 100px 20px 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ------------------------------ */
-/* TÍTULO PRINCIPAL               */
-/* ------------------------------ */
+/* Cabeçalho */
 .titulo-principal {
   text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 40px;
 }
 
 .titulo-principal h1 {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--blue-900);
+  color: #1e3a8a;
+  font-weight: 800;
+  margin-bottom: 15px;
 }
 
 .descricao-principal {
-  font-size: 1rem;
-  max-width: 750px;
-  margin: 15px auto 0 auto;
-  color: var(--gray-700);
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-gray);
   line-height: 1.6;
 }
 
 .subinfo {
   margin-top: 15px;
-  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--blue-700);
+  color: var(--blue-primary);
 }
 
-/* ------------------------------ */
-/* ANIMAÇÃO FLUTUANTE             */
-/* ------------------------------ */
-.animar {
-  animation: flutuar 3s ease-in-out infinite;
-}
-
-@keyframes flutuar {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
-}
-
-/* ------------------------------ */
-/* INDICADORES (4 cards)          */
-/* ------------------------------ */
+/* Indicadores */
 .indicadores {
   display: flex;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 22px;
-  margin-top: 35px;
+  margin-bottom: 50px;
 }
 
 .indicador-box {
-  width: 180px;
-  background-color: var(--white);
-  padding: 22px 10px;
+  background: var(--white);
+  padding: 20px;
   border-radius: 12px;
+  width: 170px;
   text-align: center;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .indicador-box h2 {
+  color: var(--blue-primary);
   font-size: 2rem;
-  color: var(--blue-800);
-  font-weight: 700;
+  margin: 0 0 5px 0;
 }
 
 .indicador-box p {
-  margin-top: 6px;
-  color: var(--gray-600);
+  color: var(--text-gray);
+  margin: 0;
   font-weight: 500;
 }
 
-/* ------------------------------ */
-/* CARDS DOS JOGOS                */
-/* ------------------------------ */
+/* Cards dos Jogos */
 .cards-jogos {
   display: flex;
   justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
-  gap: 25px;
-  margin: 50px auto;
-  max-width: 1100px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .card-jogo {
-  width: 310px;
-  background-color: var(--white);
-  border-radius: 14px;
-  padding: 25px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .card-jogo:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
 }
 
 .card-jogo h3 {
-  font-size: 1.4rem;
-  color: var(--blue-900);
-  margin-bottom: 10px;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  margin: 0 0 12px 0;
 }
 
-/* NÍVEL DO JOGO */
-.nivel {
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 6px;
-  width: fit-content;
-}
-
-.beginner {
-  background-color: var(--blue-200);
-  color: var(--blue-700);
-}
-
-.intermediate {
-  background-color: #FFE8B3;
-  color: #A56B00;
-}
-
-/* LISTA */
-.lista {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-.lista li {
-  margin: 8px 0;
-  color: var(--gray-700);
+.resumo-jogo {
   font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.lista-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.lista-features li {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
   display: flex;
-  gap: 8px;
   align-items: center;
 }
 
-.lista li::before {
+.lista-features li::before {
   content: "✔";
-  color: var(--blue-700);
+  margin-right: 10px;
+  color: var(--blue-primary);
   font-weight: bold;
 }
 
-/* BOTÃO */
-.btn-jogar {
-  margin-top: 18px;
+/* Estilização do Botão (Removendo aparência de link) */
+.btn-jogar-card {
+  display: block;
   width: 100%;
-  padding: 12px 0;
-  background-color: var(--blue-600);
-  color: var(--white);
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-jogar:hover {
-  background-color: var(--blue-700);
-  transform: translateY(-4px);
-}
-
-/* ------------------------------ */
-/* COMO FUNCIONA                  */
-/* ------------------------------ */
-
-
-/* COMO FUNCIONA (EXATAMENTE IGUAL À IMAGEM) */
-.como-funciona {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 40px;
-  background: var(--white);
-  border-radius: 18px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.como-funciona h2 {
+  padding: 15px;
+  background-color: var(--blue-primary);
+  color: var(--white) !important;
   text-align: center;
-  font-size: 2rem;
-  color: var(--gray-900);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-jogar-card:hover {
+  background-color: var(--blue-hover);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+/* Seção Como Funciona - Itens um em cima do outro */
+.como-funciona-card {
+  max-width: 850px; /* Reduzi um pouco a largura para não ficar esticado demais */
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.como-funciona-card h2 {
+  text-align: center;
   margin-bottom: 35px;
-  font-weight: 700;
+  color: #1e3a8a;
+  font-weight: 800;
 }
 
-/* GRID — duas colunas */
-.funcionamento-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px 50px;
+/* Força os itens a ficarem um embaixo do outro */
+.funcionamento-lista-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espaço entre os itens */
 }
 
-/* Cada item */
 .funciona-item {
   display: flex;
+  gap: 20px;
   align-items: flex-start;
-  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f4ff; /* Linha sutil separando os itens */
 }
 
-/* Bolinha azul com número */
-.num {
-  background-color: var(--blue-600);
-  color: var(--white);
-  font-weight: bold;
-  width: 36px;
-  height: 36px;
-  font-size: 1rem;
+/* Remove a linha do último item */
+.funciona-item:last-child {
+  border-bottom: none;
+}
+
+.num-circulo {
+  background: var(--blue-primary);
+  color: white;
+  min-width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Título do item */
-.titulo-item {
   font-weight: bold;
-  font-size: 1.05rem;
-  color: var(--gray-900);
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  flex-shrink: 0; /* Impede a bolinha de amassar */
 }
 
-/* Texto */
 .texto-item {
-  color: var(--gray-700);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: var(--text-gray);
+  margin: 0;
+  line-height: 1.6;
 }
 
-/* RESPONSIVO */
-@media (max-width: 850px) {
-  .funcionamento-grid {
-    grid-template-columns: 1fr;
-  }
+.texto-item strong {
+  color: var(--text-dark);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .funcionamento-grid { grid-template-columns: 1fr; }
+  .titulo-principal h1 { font-size: 2rem; }
 }

@@ -7,6 +7,9 @@ import Jogos from "./pages/Jogos";
 import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Internet from "./pages/Internet";
+import QuizLibras from './pages/Quiz';
+import Arrasta from './pages/Arrasta';
+import DescubraVideo from './pages/DescubraVideo'
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/hardwarevideos" element={<Hardware/>} />
         <Route path="/softwarevideos" element={<Software/>} />
         <Route path="/internetvideos" element={<Internet/>} />
+        <Route path="/quiz-libras" element={<QuizLibras />} />
+        <Route path="/arrasta-solta" element={<Arrasta />} />
+        <Route path="/descubra-pelo-video" element={<DescubraVideo />} />
       </Routes>
     </BrowserRouter>
   );

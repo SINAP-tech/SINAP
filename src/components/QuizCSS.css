@@ -1,0 +1,155 @@
+.quiz-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f4ff;
+  padding: 100px 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho */
+.game-header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-voltar-compacto {
+  text-decoration: none;
+  background-color: #64748b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Informações */
+.quiz-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-info span {
+  color: #2563EB;
+  font-weight: bold;
+}
+
+.quiz-info h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #111827;
+}
+
+/* Vídeo */
+.video-libras-quiz {
+  width: 100%;
+  border-radius: 15px;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 35px;
+}
+
+/* Grid de Alternativas */
+.opcoes-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+/* ... (mantenha o restante do código anterior) ... */
+
+.btn-opcao {
+  padding: 16px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  /* AJUSTE: Cor da letra preta por padrão */
+  color: #000000; 
+}
+
+.btn-opcao:hover:not(:disabled) {
+  border-color: #2563EB;
+  background-color: #eff6ff;
+  /* Mantém preto no hover para leitura clara */
+  color: #000000; 
+}
+
+/* Feedback nas Opções (ajustando as cores para contrastar com o texto preto) */
+.btn-opcao.correta {
+  background-color: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #166534 !important; /* Um verde bem escuro (quase preto) para legibilidade */
+}
+
+.btn-opcao.errada {
+  background-color: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #991b1b !important; /* Um vermelho bem escuro para legibilidade */
+}
+
+/* ... (resto do código) ... */
+
+/* Área Final e Feedback */
+.feedback-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.msg-feedback {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.msg-feedback.sucesso { background: #dcfce7; color: #166534; }
+.msg-feedback.erro { background: #fee2e2; color: #991b1b; }
+
+/* BOTÃO AZUL */
+.btn-proxima {
+  width: 100%;
+  max-width: 300px;
+  padding: 16px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-proxima:hover {
+  background-color: #1d4ed8;
+}
+
+.final-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Celular */
+@media (max-width: 500px) {
+  .opcoes-grid { grid-template-columns: 1fr; }
+}

@@ -1,158 +1,106 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./JogosCSS.css";
 
 export default function JogosVideos() {
+  const jogos = [
+    {
+      nome: "Quiz de Conceitos",
+      descricao: "Teste os seus conhecimentos escolhendo a alternativa correta para cada sinal apresentado no vídeo.",
+      lista: ["Vídeos em Libras", "Feedback imediato", "Pratique nomes técnicos"],
+      link: "/quiz-libras",
+    },
+    {
+      nome: "Arrasta e Solta",
+      descricao: "Associe o vídeo do sinal ao nome do componente de informática correto para completar o desafio.",
+      lista: ["Interação visual", "Prática de memorização", "Sem limite de tempo"],
+      link: "/arrasta-solta",
+    },
+    {
+      nome: "Descubra pelo Vídeo",
+      descricao: "Assista aos sinais feitos pelos alunos do SINAP e descubra qual conceito está sendo sinalizado.",
+      lista: ["Vídeos dos alunos", "Aprendizado colaborativo", "Pratique a interpretação"],
+      link: "/descubra-pelo-video",
+    },
+  ];
+
   return (
-    <div className="jogos-wrapper">
+    <>
+      <Header />
+      <div className="jogos-wrapper">
+        {/* Título principal */}
+        <section className="titulo-principal">
+          <h1>Aprendendo de Forma Divertida</h1>
+          <p className="descricao-principal">
+            Aprenda informática de forma divertida! Nossos jogos foram
+            desenvolvidos para reforçar o aprendizado dos conceitos técnicos
+            de maneira lúdica e interativa, todos com suporte completo em Libras.
+          </p>
+          <p className="subinfo">
+            🎮 Jogos educativos com vídeos em Libras produzidos pelos alunos
+          </p>
+        </section>
 
-      {/* Título principal */}
-      <section className="titulo-principal">
-        <br />
-        <h1>Aprendendo de Forma Divertida</h1>
-        <p className="descricao-principal">
-          Aprenda informática de forma divertida! Nossos jogos foram
-          desenvolvidos para reforçar o aprendizado dos conceitos técnicos
-          de maneira lúdica e interativa, todos com suporte completo em Libras.
-        </p>
-
-        <p className="subinfo">
-          🎮 Jogos educativos com vídeos em Libras produzidos pelos alunos
-        </p>
-      </section>
-
-      {/* Indicadores */}
-      <section className="indicadores">
-        <div className="indicador-box">
-          <h2>3</h2>
-          <p>Jogos Disponíveis</p>
-        </div>
-
-        <div className="indicador-box">
-          <h2>100%</h2>
-          <p>Em Libras</p>
-        </div>
-
-        <div className="indicador-box">
-          <h2>🖐️</h2>
-          <p>Totalmente Acessível</p>
-        </div>
-
-        <div className="indicador-box">
-          <h2>∞</h2>
-          <p>Tentativas Ilimitadas</p>
-        </div>
-      </section>
-
-      {/* Cards dos jogos */}
-      <section className="cards-jogos">
-
-        {/* Card 1 */}
-        <div className="card-jogo">
-          <h3>Quiz de Conceitos</h3>
-          <p className="nivel beginner">Iniciante • ⏱️ 10 min</p>
-
-          <ul className="lista">
-            <li>Vídeos em Libras</li>
-            <li>Feedback imediato</li>
-            <li>Áudio descrição</li>
-          </ul>
-
-          <button className="btn-jogar">Jogar Agora</button>
-        </div>
-
-        {/* Card 2 */}
-        <div className="card-jogo">
-          <h3>Arrasta e Solta</h3>
-          <p className="nivel beginner">Iniciante • ⏱️ 8 min</p>
-
-          <ul className="lista">
-            <li>Interação visual</li>
-            <li>Feedback ao final</li>
-            <li>Fácil e divertido</li>
-          </ul>
-
-          <button className="btn-jogar">Jogar Agora</button>
-        </div>
-
-        {/* Card 3 */}
-        <div className="card-jogo">
-          <h3>Descubra pelo Vídeo</h3>
-          <p className="nivel intermediate">Intermediário • ⏱️ 12 min</p>
-
-          <ul className="lista">
-            <li>Vídeos dos alunos</li>
-            <li>Dicas visuais</li>
-            <li>Aprendizado colaborativo</li>
-          </ul>
-
-          <button className="btn-jogar">Jogar Agora</button>
-        </div>
-
-      </section>
-
-      {/* Como funcionam os jogos */}
-      <section className="como-funciona">
-        <h2>Como Funcionam os Jogos</h2>
-
-        <div className="funcionamento-container">
-
-          {/* Item 1 */}
-          <div className="funciona-item">
-            <span className="num">1</span>
-            <p className="texto-item">
-              <strong>Instruções em Libras:</strong> todos os jogos incluem vídeos explicativos
-              em Libras para garantir que você entenda completamente as regras e objetivos.
-            </p>
+        {/* Indicadores */}
+        <section className="indicadores">
+          <div className="indicador-box">
+            <h2>3</h2>
+            <p>Jogos Ativos</p>
           </div>
-
-          {/* Item 2 */}
-          <div className="funciona-item">
-            <span className="num">2</span>
-            <p className="texto-item">
-              <strong>Feedback Visual e Sonoro:</strong> receba feedback imediato com sinais
-              visuais, mensagens de apoio e efeitos sonoros.
-            </p>
+          <div className="indicador-box">
+            <h2>100%</h2>
+            <p>Em Libras</p>
           </div>
-
-          {/* Item 3 */}
-          <div className="funciona-item">
-            <span className="num">3</span>
-            <p className="texto-item">
-              <strong>Vídeos dos Alunos:</strong> vídeos em Libras produzidos pelos próprios
-              alunos do SINAP, estimulando colaboração.
-            </p>
+          <div className="indicador-box">
+            <h2>🖐️</h2>
+            <p>Acessível</p>
           </div>
-
-          {/* Item 4 */}
-          <div className="funciona-item">
-            <span className="num">4</span>
-            <p className="texto-item">
-              <strong>Tentativas Ilimitadas:</strong> jogue quantas vezes quiser e aprenda
-              no seu próprio ritmo.
-            </p>
+          <div className="indicador-box">
+            <h2>∞</h2>
+            <p>Tentativas Ilimitadas</p>
           </div>
+        </section>
 
-          {/* Item 5 */}
-          <div className="funciona-item">
-            <span className="num">5</span>
-            <p className="texto-item">
-              <strong>Audiodescrição:</strong> acessibilidade garantida para usuários com
-              deficiência visual.
-            </p>
-          </div>
+        {/* Cards dos jogos */}
+        <section className="cards-jogos">
+          {jogos.map((jogo, index) => (
+            <div className="card-jogo" key={index}>
+              <h3>{jogo.nome}</h3>
+              <p className="resumo-jogo">{jogo.descricao}</p>
+              
+              <ul className="lista-features">
+                {jogo.lista.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
 
-          {/* Item 6 */}
-          <div className="funciona-item">
-            <span className="num">6</span>
-            <p className="texto-item">
-              <strong>Pontuação e Progresso:</strong> acompanhe seu desempenho ao longo
-              dos jogos.
-            </p>
-          </div>
+              <Link to={jogo.link} className="btn-jogar-card">
+                Jogar Agora
+              </Link>
+            </div>
+          ))}
+        </section>
 
-        </div>
-      </section>
-
-    </div>
+        {/* Como funcionam os jogos */}
+        <section className="como-funciona-card">
+  <h2>Como Funcionam os Jogos</h2>
+  <div className="funcionamento-lista-vertical">
+    {[
+      { num: 1, texto: "Instruções em Libras: todos os jogos incluem vídeos explicativos em Libras para garantir que você entenda completamente as regras." },
+      { num: 2, texto: "Feedback Visual: receba feedback imediato com sinais visuais e mensagens de apoio ao acertar ou errar." },
+      { num: 3, texto: "Vídeos dos Alunos: aprenda com vídeos em Libras produzidos pelos próprios alunos do SINAP, estimulando a colaboração." },
+      { num: 4, texto: "Tentativas Ilimitadas: jogue quantas vezes quiser e aprenda no seu próprio ritmo, sem pressão ou limite de tempo." },
+    ].map((item) => (
+      <div className="funciona-item" key={item.num}>
+        <span className="num-circulo">{item.num}</span>
+        <p className="texto-item"><strong>{item.texto}</strong></p>
+      </div>
+    ))}
+  </div>
+</section>
+      </div>
+    </>
   );
 }
