@@ -1,13 +1,16 @@
 import React from "react";
 import "./VideoPage.css"; // vamos criar esse css
 import { useNavigate } from "react-router-dom";
+import VoltarArrow from "../components/button-back";
 
 export default function VideoHardware() {
   const navigate = useNavigate();
 
   return (
+    <>
+    <VoltarArrow/>
     <div className="video-page">
-
+      
       <button className="voltar" onClick={() => navigate("/conceitos")}>
         ⬅ Voltar
       </button>
@@ -28,5 +31,6 @@ export default function VideoHardware() {
         </div>
       </div>
     </div>
+    </>
   );
 }

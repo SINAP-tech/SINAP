@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
 import '../components/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
+import VoltarArrow from "../components/button-back";
 
 
 export default function Softwares(){
@@ -88,7 +89,7 @@ export default function Softwares(){
     return (
   <>
     <Header />
-
+      <VoltarArrow/>
      {/* 🔍 Barra de pesquisa */}
      <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
      <SearchBar onSearch={setBusca} />

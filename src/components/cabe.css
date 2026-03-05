@@ -1,0 +1,25 @@
+.content{
+    margin-top: 12px;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0 2px 2px 0;
+    height: 80px;
+    width: 80px;
+}
+.btn-back{
+  background-color: transparent;
+  padding: 3px 1px 1px 1.4px;
+  height: 42px;
+  width: 42px;
+}
+.btn-back:hover {
+    animation: none;
+    background-color: #b8b6b6;
+    color: #ffffffff;
+}
+.img{
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+
+}
