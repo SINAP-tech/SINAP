@@ -4,6 +4,7 @@ import Form from "../components/Form";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import IconEmail from "../assets/email-icon.png";
+import VoltarArrow from '../components/button-back'
 import IconLibras from "../assets/logo-header.png";
 import IconClock from "../assets/clock-icon.png";
 
@@ -12,8 +13,8 @@ export default function Contato(){
         <>
             <Header/>
 
+            <VoltarArrow/>
             <div className="pagina-contato">
-
                 {/* TÍTULO E DESCRIÇÃO */}
                 <div className="titulo-bloco">
                     <h1>Contato</h1>

@@ -1,5 +1,5 @@
 import React from "react"
-// import './videoCSS.css';
+import './videoCSS.css';
 
 export default function VideoComp({titulo, descricao, topicos, videoUrl}){
     let embedURL = videoUrl;

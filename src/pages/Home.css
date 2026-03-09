@@ -67,6 +67,7 @@ header {
 
 /* ---------- BANNER ---------- */
 .banner {
+    margin-top: 3%;
     background: linear-gradient(to bottom right, var(--blue-50), var(--indigo-100));
     text-align: center;
     padding: 60px 20px;

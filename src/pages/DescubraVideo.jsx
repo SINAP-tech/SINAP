@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {getEmbedURL} from '../utils/yt';
 import "./DescubraVideo.css";
-import VoltarArrow from "../components/button-back";
 
 const questionsData = [
   {
@@ -83,7 +82,6 @@ export default function DescubraVideo() {
   return (
     <>
       <Header />
-      <VoltarArrow/>
       <div className="descubra-wrapper">
         <div className="descubra-container">
           

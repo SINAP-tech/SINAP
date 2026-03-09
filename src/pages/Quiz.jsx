@@ -8,7 +8,6 @@ export default function Quiz(){
     return (
         <>
             <Header />
-            <VoltarArrow/>
             <QuizComp />
             <Footer />
         </>
