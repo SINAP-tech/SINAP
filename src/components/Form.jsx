@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";// importando API
 import './Form.css'
 
 export default function Form(){
@@ -9,14 +10,26 @@ export default function Form(){
     const [opcao, setOpcao] = useState('');
 
     function enviarFormulario(e){
-        e.preventDefault();
-        console.log("Nome:", nome);
-        console.log("Email:", email);
-        console.log("Mensagem:", mensagem);
-        console.log("Opção selecionada:", opcao);
+    e.preventDefault();
 
-    
-        alert("Formulário enviado com sucesso! 🚀");
+    console.log("Nome:", nome);
+    console.log("Email:", email);
+    console.log("Mensagem:", mensagem);
+    console.log("Opção selecionada:", opcao);
+
+    emailjs.send(
+        "service_nb2n4or",
+        "template_tucue2o",
+        {
+            nome: nome,
+            email: email,
+            assunto: opcao,
+            mensagem: mensagem
+        },
+        "YkPt8KUD2iMV6tJyR"
+    );// importando os IDS e definindo os prompts
+
+    alert("Formulário enviado com sucesso! 🚀");
 }
     
     return(
