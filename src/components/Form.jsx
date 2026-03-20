@@ -18,17 +18,16 @@ export default function Form(){
     console.log("Opção selecionada:", opcao);
 
     emailjs.send(
-        "service_nb2n4or",
-        "template_tucue2o",
-        {
-            nome: nome,
-            email: email,
-            assunto: opcao,
-            mensagem: mensagem
-        },
-        "YkPt8KUD2iMV6tJyR"
-    );// importando os IDS e definindo os prompts
-
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    {
+        nome: nome,
+        email: email,
+        assunto: opcao,
+        mensagem: mensagem
+    },
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+);
     alert("Formulário enviado com sucesso! 🚀");
 }
     
