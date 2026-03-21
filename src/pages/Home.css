@@ -50,8 +50,9 @@ header {
 }
 
 .header-logo {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
+  border-radius: 25px;
 }
 
 .nav-links a {
@@ -201,6 +202,8 @@ header {
 
 /* ---------- FOOTER ---------- */
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: var(--blue-800);
   color: var(--white);
   padding: 40px 60px;
@@ -214,6 +217,7 @@ header {
 
 .footer-logo {
   width: 70px;
+  border-radius: 45px;
 }
 
 .footer-desc {

@@ -21,10 +21,11 @@ function Footer() {
             <span>💯 Gratuito</span>
           </div>
         </div>
-      </div>
-      <div className="footer-bottom">
+        <div className="footer-bottom">
         <p>© 2025 SINAP.</p>
       </div>
+      </div>
+      
     </footer>
   );
 }
