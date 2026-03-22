@@ -151,7 +151,6 @@ export default function QuizComp() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -6,13 +6,13 @@ export default function Videos() {
   const VideosData = [
     {
       titulo: 'Hardware',
-      descricao: 'Conheça os componentes físicos do computador',
+      descricao: 'Aprenda o sinal de hardware e Entre para ver mais sobre os sinais dos componentes físicos aqui.',
       videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls',
       caminho: '/hardwarevideos'
     },
     {
       titulo: 'Software',
-      descricao: 'Entenda os programas e os sistemas operacionais (S.O)',
+      descricao: 'Aprenda qual o sinal de Software e os sinais sobre o conteúdo de softwares aqui',
       videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
       caminho:'/softwarevideos'
     },
@@ -20,7 +20,7 @@ export default function Videos() {
     // que coisa boa, oh homi de Deus. Espero que não seja necessário imitar a boca dele...
     {
       titulo: 'Internet',
-      descricao: 'Aprenda sobre a internet e o que significa WWW',
+      descricao: 'Aprenda o Sinal de Software e os sinais Relacionados Aqui',
       videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE',
       caminho: '/internetvideos'
     }
@@ -53,14 +53,17 @@ export default function Videos() {
 
           <div className="extra-item">
             <div className="extra-icon">🎯</div>
-            <h3>Exercícios Práticos</h3>
-            <p>Atividades para fixar o aprendizado</p>
+            <h3>Jogos Práticos</h3>
+            <p>Fixe o que aprendeu jogando!</p>
           </div>
 
           <div className="extra-item">
             <div className="extra-icon">👥</div>
+            <h3>Fale Conosco</h3>
+            <p>Entre em Contato para tirar dúvidas ou fazer um feedback.</p>
+            {/* <div className="extra-icon">👥</div>
             <h3>Comunidade</h3>
-            <p>Fórum para tirar dúvidas e compartilhar experiências</p>
+            <p>Fórum para tirar dúvidas e compartilhar experiências</p> */}
           </div>
         </div>
       </div>

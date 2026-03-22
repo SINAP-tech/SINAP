@@ -33,7 +33,7 @@ export default function Videosyou({titulo, descricao, videoUrl, caminho}){
                 allowFullScreen
                 ></iframe>
             </div>
-            <button className="btn-libras"><Link to={caminho} className="textbtn">Veja tudo aqui</Link></button>
+            <button className="btn-libras"><Link to={caminho} style={{color: "white", textDecoration: 'none'}}>Veja tudo aqui</Link></button>
         </div>
 
     )

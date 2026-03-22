@@ -42,7 +42,7 @@ export default function Contato(){
                                 <img src={IconEmail} className="icone"/>
                                 <div>
                                     <p><strong>E-mail</strong></p>
-                                    <p className="sub">contato@sinap.edu.br<br/>suporte@sinap.edu.br</p>
+                                    <p className="sub">sinap9818@gmail.com</p>
                                 </div>
                             </div>
 
