@@ -1,29 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Modal from "./modalgames";
 import "./JogosCSS.css";
-import VoltarArrow from "./button-back";
+
 
 export default function JogosVideos() {
+  const [ AbrirModal, setAbrirModal] = useState(false)
   const jogos = [
     {
       nome: "Quiz de Conceitos",
       descricao: "Teste os seus conhecimentos escolhendo a alternativa correta para cada sinal apresentado no vídeo.",
       lista: ["Vídeos em Libras", "Feedback imediato", "Pratique nomes técnicos"],
-      link: "/quiz-libras",
+      id: "quiz",
     },
     {
       nome: "Arrasta e Solta",
       descricao: "Associe o vídeo do sinal ao nome do componente de informática correto para completar o desafio.",
       lista: ["Interação visual", "Prática de memorização", "Sem limite de tempo"],
-      link: "/arrasta-solta",
+      id: "arrasta",
     },
     {
       nome: "Descubra pelo Vídeo",
       descricao: "Assista aos sinais feitos pelos alunos do SINAP e descubra qual conceito está sendo sinalizado.",
       lista: ["Vídeos dos alunos", "Aprendizado colaborativo", "Pratique a interpretação"],
-      link: "/descubra-pelo-video",
+      id: "descubra",
     },
   ];
 
@@ -68,6 +69,7 @@ export default function JogosVideos() {
         <section className="cards-jogos">
           {jogos.map((jogo, index) => (
             <div className="card-jogo" key={index}>
+
               <h3>{jogo.nome}</h3>
               <p className="resumo-jogo">{jogo.descricao}</p>
               
@@ -77,12 +79,17 @@ export default function JogosVideos() {
                 ))}
               </ul>
 
-              <Link to={jogo.link} className="btn-jogar-card">
-                Jogar Agora
-              </Link>
+              <button className="btn-jogar-card" onClick={(setAbrirModal(jogo.id))}>Jogar Agora</button>
             </div>
           ))}
-        </section>
+        </section>  
+
+        {AbrirModal && (
+          <Modal
+            JogoSelecionado={AbrirModal}
+            fechar={() => setAbrirModal(false)}
+          />
+        )}
 
         {/* Como funcionam os jogos */}
         <section className="como-funciona-card">
