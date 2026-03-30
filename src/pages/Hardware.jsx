@@ -8,69 +8,63 @@ import VoltarArrow from "../components/button-back";
 
 
 export default function Hardware(){
- /* Aqui ta criando a const pra barra de pesquisa. */
+  /* Aqui ta criando a const pra barra de pesquisa. */
   const [busca, setBusca] = useState("");
-
-    const VideosData = [
+  
+  const VideosData = [
+    {
+      titulo: 'Hardware',
+      descricao: 'Aprenda o sinal de Hardware.',
+      topicos: ['Hardware', 'Parte Física'],
+      videoUrl: 'https://www.youtube.com/watch?v=31kQ9YxWZH0'
+    },
     {
       titulo: 'Placa-mãe',
-      descricao: 'Saiba como falar "placa-mãe" e o que ela é.',
+      descricao: 'Saiba como fazer o sinal de "placa-mãe".',
       topicos: ['Placa-mãe', 'Tipos e tamanhos'],
       videoUrl: ''
     },
     {
       titulo: 'Armazenamento, SSD, HD',
-      descricao: 'Entenda como falar o nome das memórias e como elas funcionam.',
+      descricao: 'Entenda como fazer o sinal de HD e SSD.',
       topicos: ['Temporária', 'Permanente'],
       videoUrl: ''
     },
     {
       titulo: 'Processador CPU',
-      descricao: 'Aprenda como funciona o processador.',
+      descricao: 'Aprenda o sinal de processador.',
       topicos: ['Cores', 'Frequencia'],
       videoUrl: ''
     },
     {
       titulo: 'Memória RAM',
-      descricao: 'Aprenda o que é uma memória volátio.',
+      descricao: 'Aprenda o sinal da memória RAM.',
       topicos: ['Tamanho', 'Dual-Channel'],
       videoUrl: ''
     },
     {
       titulo: 'Periféricos',
-      descricao: 'Aprenda o que são periféricos e exemplos.',
+      descricao: 'Aprenda a falar periféricos e exemplos.',
       topicos: ['Mouse', 'teclado'],
       videoUrl: ''
     },
     {
       titulo: 'Placa de vídeo',
-      descricao: 'O que são e para que servem',
-      topicos: ['Espaço Própio', 'GPU'],
+      descricao: 'Aprenda o sinal de "Placa de Vídeo"',
+      topicos: ['GPU'],
       videoUrl: ''
     },
     {
       titulo: 'Fonte de Alimentação',
-      descricao: 'O que é e sua importância.',
-      topicos: ['Voltagem', 'Recomendações'],
+      descricao: 'Aprenda o sinal de "Fonte".',
+      topicos: ['Fonte'],
       videoUrl: ''
     },
     {
       titulo: 'Gabinete',
-      descricao: 'Saiba o que é e para que serve.',
+      descricao: 'Saiba o sinal de Gabinete.',
       topicos: [''],
       videoUrl: ''
-    },
-    {
-      titulo: 'Dispositivos de Entrada e saída',
-      descricao: 'Saiba o que significa e exemplos.',
-      topicos: ['Microfone, teclado'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Vídeo interessante',
-      descricao: 'Dá para usar, um pouco, de base para os vídeos que vamos produzir.',
-      topicos: ['Microfone, teclado'],
-      videoUrl: 'https://www.youtube.com/watch?v=31kQ9YxWZH0'
     },
 ]
   // normaliza texto (remove acento e caixa)

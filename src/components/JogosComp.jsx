@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Modal from "./modalgames";
 import "./JogosCSS.css";
@@ -74,19 +73,19 @@ export default function JogosVideos() {
               <p className="resumo-jogo">{jogo.descricao}</p>
               
               <ul className="lista-features">
-                {jogo.lista.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
+               {jogo.lista?.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
               </ul>
 
-              <button className="btn-jogar-card" onClick={(setAbrirModal(jogo.id))}>Jogar Agora</button>
+              <button className="btn-jogar-card" onClick={() => setAbrirModal(jogo.id)}>Jogar Agora</button>
             </div>
           ))}
         </section>  
 
         {AbrirModal && (
           <Modal
-            JogoSelecionado={AbrirModal}
+            jogoSelecionado={AbrirModal}
             fechar={() => setAbrirModal(false)}
           />
         )}

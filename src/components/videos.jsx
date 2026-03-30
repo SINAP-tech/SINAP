@@ -6,13 +6,13 @@ export default function Videos() {
   const VideosData = [
     {
       titulo: 'Hardware',
-      descricao: 'Aprenda o sinal de hardware e Entre para ver mais sobre os sinais dos componentes físicos aqui.',
+      descricao: 'Aprenda o sinal de hardware e clique em "Veja tudo aqui" para ver mais sobre os sinais dos componentes físicos aqui.',
       videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls',
       caminho: '/hardwarevideos'
     },
     {
       titulo: 'Software',
-      descricao: 'Aprenda qual o sinal de Software e os sinais sobre o conteúdo de softwares aqui',
+      descricao: 'Aprenda qual o sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de softwares aqui',
       videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
       caminho:'/softwarevideos'
     },
@@ -20,7 +20,7 @@ export default function Videos() {
     // que coisa boa, oh homi de Deus. Espero que não seja necessário imitar a boca dele...
     {
       titulo: 'Internet',
-      descricao: 'Aprenda o Sinal de Software e os sinais Relacionados Aqui',
+      descricao: 'Aprenda o Sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais Relacionados Aqui',
       videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE',
       caminho: '/internetvideos'
     }

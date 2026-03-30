@@ -13,57 +13,39 @@ export default function Internet(){
 
     const VideosData = [
     {
-      titulo: 'O que é a Internet',
-      descricao: 'Entenda o que é a internet.',
+      titulo: 'Internet',
+      descricao: 'Aprenda o sinal de internet.',
       topicos: ['WWW', 'HTTP'],
       videoUrl: ''
     },
     {
-      titulo: 'Navegadores',
-      descricao: 'Como navegar por essa grande rede?',
+      titulo: 'Navegador',
+      descricao: 'Aprenda o sinal de Navegador',
       topicos: ['Brave', 'Chrome'],
       videoUrl: ''
     },
     {
-      titulo: 'E-mails e comunicação',
-      descricao: 'As formas de se comunicar pela internet',
+      titulo: 'E-mails',
+      descricao: 'Aprenda o sinal de E-mail',
       topicos: ['Chats', 'App'],
       videoUrl: ''
     },
     {
-      titulo: 'Cookies e Privacidade.',
-      descricao: 'Seu rastreamento na internet, publicidade e anúncio.',
-      topicos: ['Dados', 'Privacidade'],
-      videoUrl: ''
-    },
-    {
       titulo: 'Fake News',
-      descricao: 'As mentiras da internet.',
+      descricao: 'Aprenda o sinal de Fake News.',
       topicos: ['Mentiras', 'Click Bait'],
       videoUrl: ''
     },
     {
-      titulo: 'Pishing',
-      descricao: 'Desconfie dos links que recebe.',
-      topicos: ['Link falso', 'Letras'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Sites e URls',
-      descricao: 'O que é um site?',
+      titulo: 'Site',
+      descricao: 'Aprenda o sinal de site',
       topicos: ['Sites', 'App x Site'],
       videoUrl: ''
     },
     {
       titulo: 'Segurança',
-      descricao: 'Segurança em primeiro lugar!',
-      topicos: ['VPN', 'Proxy'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Dark e Deep Web',
-      descricao: 'Os lugares mais obscuros da internet...',
-      topicos: ['Dark Web', 'Deep Web '],
+      descricao: 'Aprenda o sinal de segurança',
+      topicos: ['Segurança'],
       videoUrl: ''
     },
 ]

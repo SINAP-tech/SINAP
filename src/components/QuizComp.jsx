@@ -86,10 +86,6 @@ export default function QuizComp() {
       <div className="quiz-page-wrapper">
         <div className="quiz-container">
           
-          <div className="game-header">
-            <Link to="/jogos" className="btn-voltar-compacto">← Sair</Link>
-          </div>
-
           {quizFinalizado ? (
             <div className="final-box">
               <h2>🎉 Parabéns!</h2>

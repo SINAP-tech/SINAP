@@ -89,10 +89,6 @@ export default function Arrasta() {
       <Header />
       <div className="arrasta-page-wrapper">
         <div className="arrasta-container-main">
-          
-          <div className="game-header">
-            <Link to="/jogos" className="btn-voltar-compacto">← Sair</Link>
-          </div>
 
           {jogoFinalizado ? (
             <div className="final-box">
@@ -183,7 +179,6 @@ export default function Arrasta() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

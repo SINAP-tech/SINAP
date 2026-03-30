@@ -14,59 +14,24 @@ export default function Softwares(){
   
     const VideosData = [
     {
-      titulo: 'O que é Software?',
-      descricao: 'Aplicativos são softwares, entenda.',
-      topicos: ['Chrome', 'Excel'],
+      titulo: 'Software?',
+      descricao: 'Aprenda o sinal de software.',
+      topicos: ['Softwares'],
       videoUrl: ''
     },
     {
       titulo: 'Sistemas Operacionais(S.O).',
-      descricao: 'Entenda o que é um e recomendações.',
-      topicos: ['Linux x Windows', 'Mac x Windows'],
+      descricao: 'Aprenda o sinal de Sistema Operacional',
+      topicos: ['Linux', 'Windows'],
       videoUrl: ''
     },
     {
-      titulo: 'Drivers',
-      descricao: 'Tradutor dos softwares.',
-      topicos: ['O que faz', 'Importância'],
+      titulo: 'Aplicativos',
+      descricao: 'Aprenda o sinal de App.',
+      topicos: ['App'],
       videoUrl: ''
     },
-    {
-      titulo: 'Atualizações e patches.',
-      descricao: 'Correções e atualizações.',
-      topicos: ['Bugs', 'Melhorias'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Programas de segurança.',
-      descricao: 'Aprenda sobre os programas de segurança.',
-      topicos: ['Anti-vírus', 'Malware'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Licenças',
-      descricao: 'Aprenda sobre licenças e para que servem.',
-      topicos: ['Software Livre', 'Código fechado'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Interface do usuário(U.I).',
-      descricao: 'Aprenda sobre interfaces.',
-      topicos: ['Menus', 'Ícones'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Compatibilidade dos App.',
-      descricao: 'Requisitos mínimos para utilizar um app.',
-      topicos: ['Requisitos do sistema', 'Requisitos de hardware'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Programas em Segundo Plano.',
-      descricao: 'Sobre o consumo de memória RAM.',
-      topicos: ['CPU', 'RAM'],
-      videoUrl: ''
-    },
+    // Precisamos de ideias?
 ]
 
  // normaliza texto (remove acento e caixa)

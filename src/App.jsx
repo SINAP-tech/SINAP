@@ -8,9 +8,9 @@ import Jogos from "./pages/Jogos";
 import Hardware from "./pages/Hardware";
 import Software from "./pages/Software";
 import Internet from "./pages/Internet";
-import QuizLibras from './pages/Quiz';
-import Arrasta from './pages/Arrasta';
-import DescubraVideo from './pages/DescubraVideo'
+import QuizLibras from './components/QuizComp';
+import Arrasta from './components/Arrasta';
+import DescubraVideo from './components/Descubra'
 
 function App() {
   return (

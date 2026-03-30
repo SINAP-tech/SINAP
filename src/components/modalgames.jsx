@@ -1,9 +1,9 @@
-import QuizComp from "./QuizComp";
-import Arrasta from "./Arrasta";
-import ChoiceGame from "./Descubra";
+import QuizComp from "./QuizComp.jsx";
+import Arrasta from "./Arrasta.jsx";
+import ChoiceGame from "./Descubra.jsx";
 import './modal.css'
 
-export default function Modal({JogoSelecionado, Fechar}){
+export default function Modal({jogoSelecionado, fechar}){
     const jogos = {
         quiz: <QuizComp/>,
         arrasta: <Arrasta/>,
@@ -13,10 +13,10 @@ export default function Modal({JogoSelecionado, Fechar}){
         <>
         <div className="modal-overlay">
             <div className="modal-box">
-                <button className="close-btn" onClick={Fechar}>
+                <button className="close-btn" onClick={fechar}>
                     X
                 </button>
-                {jogos[JogoSelecionado]}
+                {jogos[jogoSelecionado]}
             </div>
         </div>
         </>
