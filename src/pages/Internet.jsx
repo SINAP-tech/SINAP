@@ -19,12 +19,6 @@ export default function Internet(){
       videoUrl: ''
     },
     {
-      titulo: 'Navegador',
-      descricao: 'Aprenda o sinal de Navegador',
-      topicos: ['Brave', 'Chrome'],
-      videoUrl: ''
-    },
-    {
       titulo: 'E-mails',
       descricao: 'Aprenda o sinal de E-mail',
       topicos: ['Chats', 'App'],
@@ -39,12 +33,18 @@ export default function Internet(){
     {
       titulo: 'Site',
       descricao: 'Aprenda o sinal de site',
-      topicos: ['Sites', 'App x Site'],
+      topicos: ['Sites'],
       videoUrl: ''
     },
     {
-      titulo: 'Segurança',
-      descricao: 'Aprenda o sinal de segurança',
+      titulo: 'Anti-vírus',
+      descricao: 'Aprenda o sinal de Anti-vírus',
+      topicos: ['Segurança'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Vírus',
+      descricao: 'Aprenda o sinal de Vírus',
       topicos: ['Segurança'],
       videoUrl: ''
     },

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Header from "./Header";
-import Footer from "./Footer";
 import {getEmbedURL} from '../utils/yt';
 import "./ArrastaCSS.css";
 
@@ -13,17 +11,17 @@ const niveisData = [
       { id: 1, nome: "Mouse", video: "" }, //Vazio para colocar o link yt depois!!
       { id: 2, nome: "Teclado", video: "" },
       { id: 3, nome: "Monitor", video: "" },
-      { id: 4, nome: "Impressora", video: "" },
+      { id: 4, nome: "Fone", video: "" },
     ]
   },
   {
     id: 2,
-    titulo: "Nível 2: Componentes e Acessórios",
+    titulo: "Nível 2: Componentes",
     itens: [
-      { id: 5, nome: "Webcam", video: "" }, //Vazio para colocar o link yt depois!!
+      { id: 5, nome: "Processador", video: "" }, //Vazio para colocar o link yt depois!!
       { id: 6, nome: "Gabinete", video: "" },
-      { id: 7, nome: "Fone", video: "" },
-      { id: 8, nome: "Estabilizador", video: "" },
+      { id: 7, nome: "Placa de Vídeo", video: "" },
+      { id: 8, nome: "Cooler", video: "" },
     ]
   },
   {
@@ -32,8 +30,8 @@ const niveisData = [
     itens: [
       { id: 9, nome: "Roteador", video: "" }, //Vazio para colocar o link yt depois!!
       { id: 10, nome: "Pendrive", video: "" },
-      { id: 11, nome: "HD Externo", video: "" },
-      { id: 12, nome: "Scanner", video: "" },
+      { id: 11, nome: "HD", video: "" },
+      { id: 12, nome: "Wi-Fi", video: "" },
     ]
   }
 ];

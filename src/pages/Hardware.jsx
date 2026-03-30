@@ -25,8 +25,8 @@ export default function Hardware(){
       videoUrl: ''
     },
     {
-      titulo: 'Armazenamento, SSD, HD',
-      descricao: 'Entenda como fazer o sinal de HD e SSD.',
+      titulo: 'Armazenamento, HD',
+      descricao: 'Entenda como fazer o sinal de HD.',
       topicos: ['Temporária', 'Permanente'],
       videoUrl: ''
     },

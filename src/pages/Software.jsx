@@ -14,7 +14,7 @@ export default function Softwares(){
   
     const VideosData = [
     {
-      titulo: 'Software?',
+      titulo: 'Software',
       descricao: 'Aprenda o sinal de software.',
       topicos: ['Softwares'],
       videoUrl: ''
@@ -29,6 +29,18 @@ export default function Softwares(){
       titulo: 'Aplicativos',
       descricao: 'Aprenda o sinal de App.',
       topicos: ['App'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Navegador de Internet',
+      descricao: 'Aprenda o sinal de Navegador',
+      topicos: ['Explorer', 'Chrome'],
+      videoUrl: ''
+    },
+    {
+      titulo: 'Interface Gráfica',
+      descricao: 'Aprenda o sinal de interface gráfica',
+      topicos: ['Explorer', 'Chrome'],
       videoUrl: ''
     },
     // Precisamos de ideias?
