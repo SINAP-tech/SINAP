@@ -41,6 +41,7 @@ export default function Videos() {
         ))}
       </div>
 
+
       {/* SEÇÃO EXTRA */}
       <div className="extra-secao">
         <h2 className="extra-titulo">Recursos Adicionais</h2>
@@ -61,7 +62,7 @@ export default function Videos() {
           <div className="extra-item">
             <div className="extra-icon">👥</div>
             <h3>Fale Conosco</h3>
-            <p>Entre em <Link to='/contato'>Contato</Link> para tirar dúvidas ou fazer um feedback.</p>
+            <p>Entre em <Link to='/contato' className=''>Contato</Link> para tirar dúvidas ou fazer um feedback.</p>
             {/* <div className="extra-icon">👥</div>
             <h3>Comunidade</h3>
             <p>Fórum para tirar dúvidas e compartilhar experiências</p> */}

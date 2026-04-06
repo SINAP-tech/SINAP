@@ -36,6 +36,7 @@ function Banner() {
           <button className="cta-button" onClick={handleLearnClick}>
             🌟 Começar a Aprender
           </button>
+          <p>Faço parte do projeto SINAP do IFMA</p>
         </div>
       </div>
     </section>

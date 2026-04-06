@@ -48,6 +48,12 @@ export default function Internet(){
       topicos: ['Segurança'],
       videoUrl: ''
     },
+    {
+      titulo: 'Informática',
+      descricao: 'Aprenda o sinal de Informática',
+      topicos: ['inf'],
+      videoUrl: ''
+    },
 ]
 
   // normaliza texto (remove acento e caixa)
