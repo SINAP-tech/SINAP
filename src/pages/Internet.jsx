@@ -15,19 +15,19 @@ export default function Internet(){
     {
       titulo: 'Internet',
       descricao: 'Aprenda o sinal de internet.',
-      topicos: ['WWW', 'HTTP'],
+      topicos: ['WWW, HTTP'],
       videoUrl: ''
     },
     {
       titulo: 'E-mails',
       descricao: 'Aprenda o sinal de E-mail',
-      topicos: ['Chats', 'App'],
+      topicos: ['Meio de comunicação'],
       videoUrl: ''
     },
     {
       titulo: 'Fake News',
       descricao: 'Aprenda o sinal de Fake News.',
-      topicos: ['Mentiras', 'Click Bait'],
+      topicos: ['Mentiras'],
       videoUrl: ''
     },
     {

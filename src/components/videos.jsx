@@ -1,4 +1,5 @@
 import './JogosCSS.css';
+import { Link } from 'react-router-dom';
 import Videosyou from "./videosyou";
 
 export default function Videos() {
@@ -60,7 +61,7 @@ export default function Videos() {
           <div className="extra-item">
             <div className="extra-icon">👥</div>
             <h3>Fale Conosco</h3>
-            <p>Entre em Contato para tirar dúvidas ou fazer um feedback.</p>
+            <p>Entre em <Link to='/contato'>Contato</Link> para tirar dúvidas ou fazer um feedback.</p>
             {/* <div className="extra-icon">👥</div>
             <h3>Comunidade</h3>
             <p>Fórum para tirar dúvidas e compartilhar experiências</p> */}

@@ -15,37 +15,37 @@ export default function Hardware(){
     {
       titulo: 'Hardware',
       descricao: 'Aprenda o sinal de Hardware.',
-      topicos: ['Hardware', 'Parte Física'],
+      topicos: ['A Parte Física'],
       videoUrl: 'https://www.youtube.com/watch?v=31kQ9YxWZH0'
     },
     {
       titulo: 'Placa-mãe',
       descricao: 'Saiba como fazer o sinal de "placa-mãe".',
-      topicos: ['Placa-mãe', 'Tipos e tamanhos'],
+      topicos: ['Placa-mãe'],
       videoUrl: ''
     },
     {
       titulo: 'Armazenamento, HD',
       descricao: 'Entenda como fazer o sinal de HD.',
-      topicos: ['Temporária', 'Permanente'],
+      topicos: ['Memória Permanente'],
       videoUrl: ''
     },
     {
       titulo: 'Processador CPU',
       descricao: 'Aprenda o sinal de processador.',
-      topicos: ['Cores', 'Frequencia'],
+      topicos: ['CPU'],
       videoUrl: ''
     },
     {
       titulo: 'Memória RAM',
       descricao: 'Aprenda o sinal da memória RAM.',
-      topicos: ['Tamanho', 'Dual-Channel'],
+      topicos: ['Memória Volátil'],
       videoUrl: ''
     },
     {
       titulo: 'Periféricos',
       descricao: 'Aprenda a falar periféricos e exemplos.',
-      topicos: ['Mouse', 'teclado'],
+      topicos: ['Mouse e teclado'],
       videoUrl: ''
     },
     {
@@ -63,7 +63,7 @@ export default function Hardware(){
     {
       titulo: 'Gabinete',
       descricao: 'Saiba o sinal de Gabinete.',
-      topicos: [''],
+      topicos: ['Case'],
       videoUrl: ''
     },
 ]

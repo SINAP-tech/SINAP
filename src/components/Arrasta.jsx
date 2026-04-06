@@ -84,7 +84,6 @@ export default function Arrasta() {
 
   return (
     <>
-      <Header />
       <div className="arrasta-page-wrapper">
         <div className="arrasta-container-main">
 

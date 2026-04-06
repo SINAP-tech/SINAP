@@ -35,7 +35,7 @@ export default function Form(){
         <>
         <form onSubmit={enviarFormulario} className="formulario">
             <div className="escreva">
-            
+                
             <label className="Label">
                 <p>Nome</p>
                 <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome completo" required/>

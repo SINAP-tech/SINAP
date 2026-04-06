@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import "./QuizCSS.css";
 import {getEmbedURL} from '../utils/yt';
 
@@ -82,7 +79,6 @@ export default function QuizComp() {
 
   return (
     <>
-      <Header />
       <div className="quiz-page-wrapper">
         <div className="quiz-container">
           

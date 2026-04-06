@@ -42,7 +42,8 @@
     border-radius: 12px;
     border: 1px solid #c8ddff;
     box-shadow: 0 3px 8px rgba(0,0,0,0.06);
-    height: 700px;
+    height: auto;
+    max-height: fit-content;
 }
 
 .form-bloco h2 {

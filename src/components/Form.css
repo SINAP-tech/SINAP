@@ -1,40 +1,40 @@
 .formulario {
     max-width: 600px;
+    width: 100%;
     padding: 20px;
     background: #ffffff;
     border-radius: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
+
+/* Nome e Email lado a lado */
 .escreva {
     gap: 30px;
     display: flex;
-    size: 15%;
-    flex-direction:row;
-    margin-top: 10%;
+    flex-direction: row;
+    width: 100%;
 }
 
+/* Labels */
 label {
-    gap: 20px;
     font-size: 14px;
     color: #334155;
     margin-bottom: 6px;
-    width: 500px;
+    width: 100%;
 }
 
-
-/* Inputs e selects */
+/* Inputs, select e textarea */
 input,
 select,
 textarea {
     padding: 13px 14px;
-    border-radius: 10px;                  /* mais arredondado */
+    border-radius: 10px;
     border: 1px solid #a2c1e7;
     font-size: 15px;
     background: #ffffff;
     transition: 0.15s;
-    gap: 30px;
-    width: 250px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input:focus,
@@ -57,8 +57,6 @@ select {
 textarea {
     min-height: 120px;
     resize: vertical;
-    height: 150px;
-    width: 600px;
 }
 
 /* Botão */
@@ -80,9 +78,9 @@ button:hover {
     background: #2563EB;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 600px) {
-    .row {
+    .escreva {
         flex-direction: column;
     }
 }

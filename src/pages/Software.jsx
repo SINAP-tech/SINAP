@@ -22,7 +22,7 @@ export default function Softwares(){
     {
       titulo: 'Sistemas Operacionais(S.O).',
       descricao: 'Aprenda o sinal de Sistema Operacional',
-      topicos: ['Linux', 'Windows'],
+      topicos: ['Linux, Window, Mac'],
       videoUrl: ''
     },
     {
@@ -34,13 +34,13 @@ export default function Softwares(){
     {
       titulo: 'Navegador de Internet',
       descricao: 'Aprenda o sinal de Navegador',
-      topicos: ['Explorer', 'Chrome'],
+      topicos: ['Explorer, Chrome'],
       videoUrl: ''
     },
     {
       titulo: 'Interface Gráfica',
       descricao: 'Aprenda o sinal de interface gráfica',
-      topicos: ['Explorer', 'Chrome'],
+      topicos: ['UI(User Interface)'],
       videoUrl: ''
     },
     // Precisamos de ideias?

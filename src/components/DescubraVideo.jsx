@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import Footer from "./Footer";
 import {getEmbedURL} from '../utils/yt';
 import "./DescubraVideo.css";
 
@@ -81,13 +80,8 @@ export default function DescubraVideo() {
 
   return (
     <>
-      <Header />
       <div className="descubra-wrapper">
         <div className="descubra-container">
-          
-          <div className="game-header">
-            <Link to="/jogos" className="btn-voltar-compacto">← Sair</Link>
-          </div>
 
           {isFinished ? (
             <div className="final-box">
@@ -117,12 +111,12 @@ export default function DescubraVideo() {
                       onClick={() => handleSelect(opt)}
                     >
                      <iframe
-  src={getEmbedURL(opt.src)}
-  title="Video opção"
-  className="video-option"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-/>
+                        src={getEmbedURL(opt.src)}
+                        title="Video opção"
+                        className="video-option"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
                     </div>
                   );
                 })}
@@ -148,7 +142,6 @@ export default function DescubraVideo() {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

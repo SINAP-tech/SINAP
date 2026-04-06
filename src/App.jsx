@@ -10,7 +10,7 @@ import Software from "./pages/Software";
 import Internet from "./pages/Internet";
 import QuizLibras from './components/QuizComp';
 import Arrasta from './components/Arrasta';
-import DescubraVideo from './components/Descubra'
+import DescubraVideo from "./components/DescubraVideo";
 
 function App() {
   return (
