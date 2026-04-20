@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
-import '../components/videoCSS.css'
+import '../styles/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
 import VoltarArrow from "../components/button-back";
 
@@ -16,7 +16,7 @@ export default function Internet(){
       titulo: 'Internet',
       descricao: 'Aprenda o sinal de internet.',
       topicos: ['WWW, HTTP'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/OkFMrMonFSw'
     },
     {
       titulo: 'E-mails',

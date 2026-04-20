@@ -199,7 +199,82 @@ header {
   box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
+/* ---------- FEATURES (Cards Superiores) ---------- */
 
+/* Container Pai do Sobre-nos */
+.Sobre-nos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Fundo branco como na imagem */
+  width: 100%;
+}
+
+/* Container dos Cards (Ajuste crucial) */
+.SecLayer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* Espaçamento entre os cards */
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Para não quebrar em telas menores */
+}
+
+/* O Card individual */
+.card-sobrenos {
+  background: #ffffff;
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Sombra suave identica a da imagem */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+/* Foto Redonda */
+.images-ph {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  /* Sombra interna leve na foto */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Textos dentro do Card */
+.nome {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  min-height: 50px; /* Garante alinhamento mesmo com nomes longos */
+  display: flex;
+  align-items: center;
+}
+
+.desc {
+  color: #2563EB;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.arroba {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
 /* ---------- FOOTER ---------- */
 .footer {
   display: flex;

@@ -1,5 +1,5 @@
 import React from "react";
-import './Contato.css'
+import '../styles/Contato.css'
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

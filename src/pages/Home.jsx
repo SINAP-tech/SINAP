@@ -5,7 +5,7 @@ import IntroSection from "../components/IntroSection";
 import InclusaoSection from "../components/InclusaoSection";
 import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
-import "./Home.css";
+import "../styles/Home.css";
 
 function Home() {
   return (

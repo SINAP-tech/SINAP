@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import {getEmbedURL} from '../utils/yt';
-import "./DescubraVideo.css";
+import "../styles/DescubraVideo.css";
 
 const questionsData = [
   {

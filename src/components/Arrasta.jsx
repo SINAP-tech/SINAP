@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import {getEmbedURL} from '../utils/yt';
-import "./ArrastaCSS.css";
+import "../styles/ArrastaCSS.css";
 
 const niveisData = [
   {

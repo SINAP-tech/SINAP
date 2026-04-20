@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../pages/Home.css";
+import "../styles/Home.css";
 import BannerHomeImage from '../assets/ReditBanner.png'
 
 function Banner() {
@@ -36,8 +36,7 @@ function Banner() {
           <button className="cta-button" onClick={handleLearnClick}>
             🌟 Começar a Aprender
           </button>
-          <p>Faço parte do projeto SINAP do IFMA</p>
-        </div>
+         </div>
       </div>
     </section>
   );

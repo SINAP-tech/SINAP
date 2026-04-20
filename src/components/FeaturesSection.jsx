@@ -3,7 +3,7 @@ import Thata from '../assets/ThataIMG.jpeg';
 import Daiane from '../assets/DaianeIMG.png'
 import Tototz from '../assets/ArthurIMG.jpeg';
 
-import "../pages/Home.css";
+import "../styles/Home.css";
 
 function FeaturesSection() {
   return (
@@ -34,7 +34,7 @@ function FeaturesSection() {
       </div>
       <div className="Sobre-nos">
         <h1>Nossa Equipe</h1> 
-        <p>Esse projeto é desenvolvido por estudantes do Instituto Federal de Ciencias, Educação e Tecnologias do Maranhão(IFMA) - Campus Timon</p>
+        <p>Esse projeto é desenvolvido por estudantes do Instituto Federal de Ciencias, Educação e Tecnologias do Maranhão(IFMA) - Campus Timon, do curso de Informática.</p>
   
       <div className='SecLayer'>
         
@@ -42,25 +42,25 @@ function FeaturesSection() {
           <img src={Daiane} className='images-ph' />
           <p className='nome'>Daiane da Silva Algarves Castelo Branco</p>
           <p className='desc'>Orientadora</p>
-          <p className='arroba'>Rede Social: @daianealgarves</p>
+          <p className='arroba'>Rede Social: <br />@daianealgarves</p>
         </div>
         <div className="card-sobrenos">
           <img src={Thata} className='images-ph' />
           <p className='nome'>Thamyres Vargas Sales</p>
           <p className='desc'>Estudante</p>
-          <p className='arroba'>Rede Social: @thamyres._.vargas._.sales</p>
+          <p className='arroba'> Rede Social: <br />@thamyres._.vargas._.sales</p>
         </div>
         <div className="card-sobrenos">
           <img src={Law} className='images-ph' />
           <p className='nome'>Lourenço Silva Aguiar</p>
           <p className='desc'>Estudante</p>
-          <p className='arroba'>Rede Social: @lourencoo.lolo </p>
+          <p className='arroba'>Rede Social: <br />@lourencoo.lolo </p>
         </div>
         <div className="card-sobrenos">
           <img src={Tototz} className='images-ph' />
           <p className='nome'>Arthur lopes Conceição</p>
           <p className='desc'>Estudante</p>
-          <p className='arroba'>Rede Social: @arthur_lp.tz</p>
+          <p className='arroba'>Rede Social: <br />@arthur_lp.tz</p>
         </div>
       </div>
       </div>

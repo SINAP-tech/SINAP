@@ -1,5 +1,5 @@
 import React from "react";
-import '../pages/Conceitos.css';
+import '../styles/Conceitos.css';
 import VoltarArrow from "./button-back";
 
 

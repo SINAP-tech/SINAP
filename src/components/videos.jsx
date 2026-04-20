@@ -1,4 +1,4 @@
-import './JogosCSS.css';
+import '../styles/JogosCSS.css';
 import { Link } from 'react-router-dom';
 import Videosyou from "./videosyou";
 
@@ -8,12 +8,12 @@ export default function Videos() {
     {
       titulo: 'Hardware',
       descricao: 'Aprenda o sinal de hardware e clique em "Veja tudo aqui" para ver mais sobre os sinais dos componentes físicos aqui.',
-      videoUrl: 'https://www.youtube.com/watch?v=cI-Nbhaq4Ls',
+      videoUrl: 'https://youtu.be/mREcCtS476M',
       caminho: '/hardwarevideos'
     },
     {
       titulo: 'Software',
-      descricao: 'Aprenda qual o sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de softwares aqui',
+      descricao: 'Aprenda qual o sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de softwares aqui.',
       videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
       caminho:'/softwarevideos'
     },
@@ -21,7 +21,7 @@ export default function Videos() {
     // que coisa boa, oh homi de Deus. Espero que não seja necessário imitar a boca dele...
     {
       titulo: 'Internet',
-      descricao: 'Aprenda o Sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais Relacionados Aqui',
+      descricao: 'Aprenda o Sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de internet.',
       videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE',
       caminho: '/internetvideos'
     }

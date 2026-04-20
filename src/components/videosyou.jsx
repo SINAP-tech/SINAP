@@ -1,5 +1,5 @@
 import React from "react"
-import './videoCSS.css';
+import '../styles/videoCSS.css';
 import { Link } from "react-router-dom";
 
 export default function Videosyou({titulo, descricao, videoUrl, caminho}){

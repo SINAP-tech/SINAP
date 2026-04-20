@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
-import '../components/videoCSS.css'
+import '../styles/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
 import VoltarArrow from "../components/button-back";
 
@@ -16,24 +16,18 @@ export default function Hardware(){
       titulo: 'Hardware',
       descricao: 'Aprenda o sinal de Hardware.',
       topicos: ['A Parte Física'],
-      videoUrl: 'https://www.youtube.com/watch?v=31kQ9YxWZH0'
+      videoUrl: 'https://youtu.be/mREcCtS476M'
     },
     {
-      titulo: 'Placa-mãe',
-      descricao: 'Saiba como fazer o sinal de "placa-mãe".',
+      titulo: 'Placa-mãe e Processador',
+      descricao: 'Saiba como fazer o sinal de "placa-mãe" e de "Processador".',
       topicos: ['Placa-mãe'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/D69FC-0yRn0'
     },
     {
       titulo: 'Armazenamento, HD',
       descricao: 'Entenda como fazer o sinal de HD.',
       topicos: ['Memória Permanente'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Processador CPU',
-      descricao: 'Aprenda o sinal de processador.',
-      topicos: ['CPU'],
       videoUrl: ''
     },
     {
@@ -52,7 +46,7 @@ export default function Hardware(){
       titulo: 'Placa de vídeo',
       descricao: 'Aprenda o sinal de "Placa de Vídeo"',
       topicos: ['GPU'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/v3ha45fak5Y'
     },
     {
       titulo: 'Fonte de Alimentação',
@@ -61,10 +55,10 @@ export default function Hardware(){
       videoUrl: ''
     },
     {
-      titulo: 'Gabinete',
+      titulo: 'Gabinete e Monitor',
       descricao: 'Saiba o sinal de Gabinete.',
       topicos: ['Case'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/EGo9Z0g-0ww'
     },
 ]
   // normaliza texto (remove acento e caixa)

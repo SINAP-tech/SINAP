@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Modal from "./modalgames";
-import "./JogosCSS.css";
+import "../styles/JogosCSS.css";
 
 
 export default function JogosVideos() {

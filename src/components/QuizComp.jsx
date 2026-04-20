@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./QuizCSS.css";
+import "../styles/QuizCSS.css";
 import {getEmbedURL} from '../utils/yt';
 
 const perguntasIniciais = [

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './cabe.css'
+import '../styles/cabe.css'
 import BackArrow from '../assets/back-arrow.png'
 
 export default function VoltarArrow(){
