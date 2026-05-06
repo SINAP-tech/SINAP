@@ -2,27 +2,39 @@ import React, { useState, useEffect } from "react";
 import "../styles/QuizCSS.css";
 import {getEmbedURL} from '../utils/yt';
 
+import Mouse from '../Gifs/Gif Mouse.gif'
+import Teclado from '../Gifs/Gif Teclado.gif'
+import Monitor from '../Gifs/Gif Monitor.gif'
+import Gabinete from '../Gifs/Gif Gabinete.gif'
+
 const perguntasIniciais = [
   {
     id: 1,
-    video: "", //Vazio para colocar o link yt depois!!
+    video: Mouse, //Vazio para colocar o link yt depois!!
     pergunta: "Qual conceito este sinal representa?",
-    alternativas: ["Teclado", "Monitor", "Mouse", "Impressora"],
+    alternativas: ["Teclado", "Monitor", "Mouse", "Gabinete"],
     correta: "Mouse",
   },
   {
     id: 2,
-    video: "", //Vazio para colocar o link yt depois!!
+    video: Teclado, //Vazio para colocar o link yt depois!!
     pergunta: "Qual conceito este sinal representa?",
-    alternativas: ["Teclado", "Monitor", "Mouse", "Impressora"],
+    alternativas: ["Teclado", "Monitor", "Mouse", "Gabinete"],
     correta: "Teclado",
   },
   {
     id: 3,
-    video: "", //Vazio para colocar o link yt depois!!
+    video: Monitor, //Vazio para colocar o link yt depois!!
     pergunta: "Qual conceito este sinal representa?",
-    alternativas: ["Monitor", "Gabinete", "Webcam", "Mouse"],
+    alternativas: ["Monitor", "Gabinete", "Teclado", "Mouse"],
     correta: "Monitor",
+  },
+  {
+    id: 4,
+    video: Gabinete, //Vazio para colocar o link yt depois!!
+    pergunta: "Qual conceito este sinal representa?",
+    alternativas: ["Monitor", "Gabinete", "Teclado", "Mouse"],
+    correta: "Gabinete",
   }
 ];
 
@@ -95,15 +107,10 @@ export default function QuizComp() {
                 <h3>{perguntaAtual.pergunta}</h3>
               </div>
               
-              <iframe
+              <img
                   key={perguntaAtual.id}
-                  width="100%"
-                  height="250"
                   src={getEmbedURL(perguntaAtual.video)}
-                  title="Video Libras"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                 className="video-libras-quiz"
+                  className="video-libras-quiz"
               />
 
               <div className="opcoes-grid">

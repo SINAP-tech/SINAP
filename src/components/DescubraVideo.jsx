@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import {getEmbedURL} from '../utils/yt';
+//import {getEmbedURL} from '../utils/yt';
+
+import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4';
+import Fone from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
+import FoneDeOuvido from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
+import Monitor from '../Gifs/Gif Monitor OTIMIZADO.gif';
+import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.gif';
+
 import "../styles/DescubraVideo.css";
 
 const questionsData = [
@@ -9,24 +16,24 @@ const questionsData = [
     id: 1,
     word: "Mouse",
     options: [
-      { id: "a", src: "", isCorrect: true }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: "", isCorrect: false }
+      { id: "a", src: FoneDeOuvido, isCorrect: true }, //Vazio para colocar o link yt depois!!
+      { id: "b", src: Fone, isCorrect: false }
     ]
   },
   {
     id: 2,
     word: "Monitor",
     options: [
-      { id: "a", src: "", isCorrect: false }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: "", isCorrect: true }
+      { id: "a", src: Gabinete, isCorrect: false }, //Vazio para colocar o link yt depois!!
+      { id: "b", src: Monitor, isCorrect: true }
     ]
   },
   {
     id: 3,
     word: "Fone de Ouvido",
     options: [
-      { id: "a", src: "", isCorrect: true }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: "", isCorrect: false }
+      { id: "a", src: Fone, isCorrect: true }, //Vazio para colocar o link yt depois!!
+      { id: "b", src: Mouse, isCorrect: false }
     ]
   }
 ];
@@ -110,13 +117,9 @@ export default function DescubraVideo() {
                         ${showWrong ? "wrong-border" : ""}`}
                       onClick={() => handleSelect(opt)}
                     >
-                     <iframe
-                        src={getEmbedURL(opt.src)}
-                        title="Video opção"
-                        className="video-option"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
+                   '<video autoPlay loop muted playsInline>
+                      <source src={opt.src} type="video/mp4" />
+                    </video>
                     </div>
                   );
                 })}

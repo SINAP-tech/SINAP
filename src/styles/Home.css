@@ -209,11 +209,13 @@ header {
   padding: 60px 20px;
   background-color: #ffffff; /* Fundo branco como na imagem */
   width: 100%;
+  border-radius: 12px;
 }
 
 /* Container dos Cards (Ajuste crucial) */
 .SecLayer {
   display: flex;
+  border-radius: 12px;
   justify-content: center;
   align-items: stretch;
   gap: 20px; /* Espaçamento entre os cards */

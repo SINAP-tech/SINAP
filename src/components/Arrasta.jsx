@@ -1,6 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import {getEmbedURL} from '../utils/yt';
+//import {getEmbedURL} from '../utils/yt';
+
+import Mouse from '../Gifs/Gif Mouse.gif'
+import Teclado from '../Gifs/Gif Teclado.gif'
+import Monitor from '../Gifs/Gif Monitor.gif'
+import Gabinete from '../Gifs/Gif Gabinete.gif'
+import Fone from '../Gifs/Gif Fone de Ouvido.gif'
+import Processador from '../Gifs/Gif Processador.gif'
+import Gpu from '../Gifs/Gif Placa de Video.gif'
+import Cooler from '../Gifs/Gif Cooler.gif'
+import Roteador from '../Gifs/Gif Roteador.gif'
+import Pendrive from '../Gifs/Gif Pendrive.gif'
+import Hd from '../Gifs/Gif HD.gif'
+import Wifi from '../Gifs/Gif wifi.gif'
+
 import "../styles/ArrastaCSS.css";
 
 const niveisData = [
@@ -8,30 +22,30 @@ const niveisData = [
     id: 1,
     titulo: "Nível 1: Periféricos Básicos",
     itens: [
-      { id: 1, nome: "Mouse", video: "" }, //Vazio para colocar o link yt depois!!
-      { id: 2, nome: "Teclado", video: "" },
-      { id: 3, nome: "Monitor", video: "" },
-      { id: 4, nome: "Fone", video: "" },
+      { id: 1, nome: "Mouse", video: Mouse }, //Vazio para colocar o link yt depois!!
+      { id: 2, nome: "Teclado", video: Teclado },
+      { id: 3, nome: "Monitor", video: Monitor },
+      { id: 4, nome: "Fone", video: Fone },
     ]
   },
   {
     id: 2,
     titulo: "Nível 2: Componentes",
     itens: [
-      { id: 5, nome: "Processador", video: "" }, //Vazio para colocar o link yt depois!!
-      { id: 6, nome: "Gabinete", video: "" },
-      { id: 7, nome: "Placa de Vídeo", video: "" },
-      { id: 8, nome: "Cooler", video: "" },
+      { id: 5, nome: "Processador", video: Processador }, //Vazio para colocar o link yt depois!!
+      { id: 6, nome: "Gabinete", video: Gabinete },
+      { id: 7, nome: "Placa de Vídeo", video: Gpu},
+      { id: 8, nome: "Cooler", video: Cooler },
     ]
   },
-  {
+  { 
     id: 3,
     titulo: "Nível 3: Armazenamento e Rede",
     itens: [
-      { id: 9, nome: "Roteador", video: "" }, //Vazio para colocar o link yt depois!!
-      { id: 10, nome: "Pendrive", video: "" },
-      { id: 11, nome: "HD", video: "" },
-      { id: 12, nome: "Wi-Fi", video: "" },
+      { id: 9, nome: "Roteador", video: Roteador }, //Vazio para colocar o link yt depois!!
+      { id: 10, nome: "Pendrive", video: Pendrive },
+      { id: 11, nome: "HD", video: Hd },
+      { id: 12, nome: "Wi-Fi", video: Wifi },
     ]
   }
 ];
@@ -114,12 +128,10 @@ export default function Arrasta() {
                         onDragStart={(e) => arrastar(e, item.id)}
                       >
                         <span className="badge">Vídeo</span>
-                        <iframe
-                            src={getEmbedURL(item.video)}
+                        <img
+                            src={item.video}
                             title={item.nome}
                             className="mini-video"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
                         />
                       </div>
                     );
@@ -142,12 +154,10 @@ export default function Arrasta() {
                         <div className="drop-content">
                           <span className="drop-text-nome">{item.nome}</span>
                           {itemColocado && (
-                           <iframe
-                              src={getEmbedURL(itemColocado.video)}
+                           <img
+                              src={itemColocado.video}
                               title={itemColocado.nome}
                               className="mini-video"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowFullScreen
                             />
                           )}
                         </div>

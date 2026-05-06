@@ -17,31 +17,31 @@ export default function Softwares(){
       titulo: 'Software',
       descricao: 'Aprenda o sinal de software.',
       topicos: ['Softwares'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/B3hNTyK1S0w'
     },
     {
       titulo: 'Sistemas Operacionais(S.O).',
       descricao: 'Aprenda o sinal de Sistema Operacional',
       topicos: ['Linux, Window, Mac'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/rwLl2yuvxzk'
     },
     {
       titulo: 'Aplicativos',
       descricao: 'Aprenda o sinal de App.',
       topicos: ['App'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/XyTf4zAeWiA'
     },
     {
       titulo: 'Navegador de Internet',
       descricao: 'Aprenda o sinal de Navegador',
       topicos: ['Explorer, Chrome'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/WDV8y7GAnAA'
     },
     {
       titulo: 'Interface Gráfica',
       descricao: 'Aprenda o sinal de interface gráfica',
       topicos: ['UI(User Interface)'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/P3WylZgEu_s'
     },
     // Precisamos de ideias?
 ]

@@ -16,7 +16,7 @@ export default function Hardware(){
       titulo: 'Hardware',
       descricao: 'Aprenda o sinal de Hardware.',
       topicos: ['A Parte Física'],
-      videoUrl: 'https://youtu.be/mREcCtS476M'
+      videoUrl: 'https://youtu.be/zZC8_aUMiEM'
     },
     {
       titulo: 'Placa-mãe e Processador',
@@ -25,22 +25,16 @@ export default function Hardware(){
       videoUrl: 'https://youtu.be/D69FC-0yRn0'
     },
     {
-      titulo: 'Armazenamento, HD',
-      descricao: 'Entenda como fazer o sinal de HD.',
+      titulo: 'HD e RAM',
+      descricao: 'Entenda como fazer o sinal de HD e memória RAM.',
       topicos: ['Memória Permanente'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Memória RAM',
-      descricao: 'Aprenda o sinal da memória RAM.',
-      topicos: ['Memória Volátil'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/Y_FHabqUd9M'
     },
     {
       titulo: 'Periféricos',
-      descricao: 'Aprenda a falar periféricos e exemplos.',
+      descricao: 'Aprenda a falar os periféricos.',
       topicos: ['Mouse e teclado'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/EPMi33vhNIQ'
     },
     {
       titulo: 'Placa de vídeo',
@@ -52,13 +46,19 @@ export default function Hardware(){
       titulo: 'Fonte de Alimentação',
       descricao: 'Aprenda o sinal de "Fonte".',
       topicos: ['Fonte'],
-      videoUrl: ''
+      videoUrl: 'https://youtu.be/PvJIPbrMe3Q'
     },
     {
       titulo: 'Gabinete e Monitor',
       descricao: 'Saiba o sinal de Gabinete.',
       topicos: ['Case'],
       videoUrl: 'https://youtu.be/EGo9Z0g-0ww'
+    },
+    {
+      titulo: 'Cooler',
+      descricao: 'Saiba o sinal de Cooler.',
+      topicos: ['Ventoinha'],
+      videoUrl: 'https://youtu.be/xt66O60i488'
     },
 ]
   // normaliza texto (remove acento e caixa)

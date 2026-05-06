@@ -8,13 +8,13 @@ export default function Videos() {
     {
       titulo: 'Hardware',
       descricao: 'Aprenda o sinal de hardware e clique em "Veja tudo aqui" para ver mais sobre os sinais dos componentes físicos aqui.',
-      videoUrl: 'https://youtu.be/mREcCtS476M',
+      videoUrl: 'https://youtu.be/zZC8_aUMiEM',
       caminho: '/hardwarevideos'
     },
     {
       titulo: 'Software',
       descricao: 'Aprenda qual o sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de softwares aqui.',
-      videoUrl: 'https://www.youtube.com/watch?v=wSRtuC_BN10',
+      videoUrl: 'https://youtu.be/B3hNTyK1S0w',
       caminho:'/softwarevideos'
     },
     //Po, esse vídeo é muito bom, ele ta apresentando diversos conteúdos que vamos por aqui,
@@ -22,7 +22,7 @@ export default function Videos() {
     {
       titulo: 'Internet',
       descricao: 'Aprenda o Sinal de Software e clique em "Veja tudo aqui" para ver mais sobre os sinais sobre o conteúdo de internet.',
-      videoUrl: 'https://www.youtube.com/watch?v=vLvDDMYUZbE',
+      videoUrl: 'https://youtu.be/Rn5ey7TjpeM',
       caminho: '/internetvideos'
     }
   ];

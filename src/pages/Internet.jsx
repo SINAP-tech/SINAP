@@ -12,48 +12,48 @@ export default function Internet(){
     const [busca, setBusca] = useState("");
 
     const VideosData = [
-    {
-      titulo: 'Internet',
-      descricao: 'Aprenda o sinal de internet.',
-      topicos: ['WWW, HTTP'],
-      videoUrl: 'https://youtu.be/OkFMrMonFSw'
-    },
-    {
-      titulo: 'E-mails',
-      descricao: 'Aprenda o sinal de E-mail',
-      topicos: ['Meio de comunicação'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Fake News',
-      descricao: 'Aprenda o sinal de Fake News.',
-      topicos: ['Mentiras'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Site',
-      descricao: 'Aprenda o sinal de site',
-      topicos: ['Sites'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Anti-vírus',
-      descricao: 'Aprenda o sinal de Anti-vírus',
-      topicos: ['Segurança'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Vírus',
-      descricao: 'Aprenda o sinal de Vírus',
-      topicos: ['Segurança'],
-      videoUrl: ''
-    },
-    {
-      titulo: 'Informática',
-      descricao: 'Aprenda o sinal de Informática',
-      topicos: ['inf'],
-      videoUrl: ''
-    },
+      {
+        titulo: 'Internet',
+        descricao: 'Aprenda o sinal de internet.',
+        topicos: ['WWW, HTTP'],
+        videoUrl: 'https://youtu.be/Rn5ey7TjpeM'
+      },
+      {
+        titulo: 'Informática',
+        descricao: 'Aprenda o sinal de Informática',
+        topicos: ['informática'],
+        videoUrl: 'https://youtu.be/-us0MzXF5P4'
+      },
+      {
+        titulo: 'E-mails e sites',
+        descricao: 'Aprenda o sinal de E-mail e Site',
+        topicos: ['Login em sites'],
+        videoUrl: 'https://youtu.be/QM2bxpYznNk'
+      },
+      {
+        titulo: 'Vírus e Anti-vírus',
+        descricao: 'Aprenda o sinal de Vírus e Anti-vírus',
+        topicos: ['Segurança'],
+        videoUrl: 'https://youtu.be/2GgajVPVRxw'
+      },
+      {
+        titulo: 'Wifi e Pendrive',
+        descricao: 'Aprenda o sinal de Wi-fi e Pendrive.',
+        topicos: ['Segurança'],
+        videoUrl: 'https://youtu.be/RNbXqiw94J0'
+      },
+      {
+        titulo: 'Roteador',
+        descricao: 'Aprenda o sinal de Roteador.',
+        topicos: ['Segurança'],
+        videoUrl: 'https://youtu.be/0xihxD2ijM0'
+      },
+      {
+        titulo: 'Fone de Ouvido',
+        descricao: 'Aprenda o sinal de Fone de Ouvido.',
+        topicos: ['Música'],
+        videoUrl: 'https://youtu.be/oCpcsKoT11c'
+      },
 ]
 
   // normaliza texto (remove acento e caixa)
