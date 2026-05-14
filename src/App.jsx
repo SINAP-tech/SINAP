@@ -11,14 +11,16 @@ import Internet from "./pages/Internet";
 import QuizLibras from './components/QuizComp';
 import Arrasta from './components/Arrasta';
 import DescubraVideo from "./components/DescubraVideo";
+import TesteFirebase from "./pages/TesteFirebase";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/conceitos" element={<Conceitos />} />
         <Route path="/jogos" element={<Jogos/>} />
+        <Route path="/firebasetest" element={<TesteFirebase/>} />
+        <Route path="/conceitos" element={<Conceitos />} />
         <Route path="/contato" element={<Contato/>} />
         <Route path="/hardwarevideos" element={<Hardware/>} />
         <Route path="/softwarevideos" element={<Software/>} />

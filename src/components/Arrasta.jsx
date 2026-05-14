@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 //import {getEmbedURL} from '../utils/yt';
 
-import Mouse from '../Gifs/Gif Mouse.gif'
-import Teclado from '../Gifs/Gif Teclado.gif'
-import Monitor from '../Gifs/Gif Monitor.gif'
-import Gabinete from '../Gifs/Gif Gabinete.gif'
-import Fone from '../Gifs/Gif Fone de Ouvido.gif'
-import Processador from '../Gifs/Gif Processador.gif'
-import Gpu from '../Gifs/Gif Placa de Video.gif'
-import Cooler from '../Gifs/Gif Cooler.gif'
-import Roteador from '../Gifs/Gif Roteador.gif'
-import Pendrive from '../Gifs/Gif Pendrive.gif'
-import Hd from '../Gifs/Gif HD.gif'
-import Wifi from '../Gifs/Gif wifi.gif'
+import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4' // ok
+import Teclado from '../Gifs/Gif Teclado OTIMIZADO.mp4' //ok
+import Roteador from '../Gifs/Gif Roteador OTIMIZADO.mp4'
+import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.mp4'
+import Fone from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4'
+import Gpu from '../Gifs/Gif Placa de Video OTIMIZADO.mp4'
+//import Monitor from '../Gifs/Gif Monitor.mp4'
+//import Processador from '../Gifs/Gif Processador.mp4'
+//import Cooler from '../Gifs/Gif Cooler.mp4'
+//import Pendrive from '../Gifs/Gif Pendrive.mp4'
+//import Hd from '../Gifs/Gif HD.mp4'
+//import Wifi from '../Gifs/Gif wifi.mp4'
 
 import "../styles/ArrastaCSS.css";
 
@@ -24,7 +24,7 @@ const niveisData = [
     itens: [
       { id: 1, nome: "Mouse", video: Mouse }, //Vazio para colocar o link yt depois!!
       { id: 2, nome: "Teclado", video: Teclado },
-      { id: 3, nome: "Monitor", video: Monitor },
+      { id: 3, nome: "Monitor", video: "Monitor" },
       { id: 4, nome: "Fone", video: Fone },
     ]
   },
@@ -32,10 +32,10 @@ const niveisData = [
     id: 2,
     titulo: "Nível 2: Componentes",
     itens: [
-      { id: 5, nome: "Processador", video: Processador }, //Vazio para colocar o link yt depois!!
+      { id: 5, nome: "Processador", video: "Processador" }, //Vazio para colocar o link yt depois!!
       { id: 6, nome: "Gabinete", video: Gabinete },
       { id: 7, nome: "Placa de Vídeo", video: Gpu},
-      { id: 8, nome: "Cooler", video: Cooler },
+      { id: 8, nome: "Cooler", video: "Cooler" },
     ]
   },
   { 
@@ -43,9 +43,9 @@ const niveisData = [
     titulo: "Nível 3: Armazenamento e Rede",
     itens: [
       { id: 9, nome: "Roteador", video: Roteador }, //Vazio para colocar o link yt depois!!
-      { id: 10, nome: "Pendrive", video: Pendrive },
-      { id: 11, nome: "HD", video: Hd },
-      { id: 12, nome: "Wi-Fi", video: Wifi },
+      { id: 10, nome: "Pendrive", video: "Pendrive" },
+      { id: 11, nome: "HD", video: "Hd" },
+      { id: 12, nome: "Wi-Fi", video: "Wifi" },
     ]
   }
 ];

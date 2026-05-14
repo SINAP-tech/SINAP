@@ -12,6 +12,7 @@
     "dependencies": {
         "@djpfs/react-vlibras": "^2.0.2",
         "@emailjs/browser": "^4.4.1",
+        "firebase": "^12.13.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
         "react-router-dom": "^7.10.1"

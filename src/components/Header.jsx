@@ -19,6 +19,7 @@ function Header() {
         <Link to="/conceitos">Conceitos em Informática em Libras</Link> |
         <Link to="/jogos">Jogos</Link> |
         <Link to="/contato">Contato</Link> 
+        <Link to="/firebasetest">Firebase</Link> 
       </nav>
     </header>
   );

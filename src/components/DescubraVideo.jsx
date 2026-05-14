@@ -5,9 +5,8 @@ import Header from "./Header";
 
 import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4';
 import Fone from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
-import FoneDeOuvido from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
-import Monitor from '../Gifs/Gif Monitor OTIMIZADO.gif';
-import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.gif';
+//import Monitor from '../Gifs/Gif Monitor OTIMIZADO.gif';
+import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.mp4';
 
 import "../styles/DescubraVideo.css";
 
@@ -16,8 +15,8 @@ const questionsData = [
     id: 1,
     word: "Mouse",
     options: [
-      { id: "a", src: FoneDeOuvido, isCorrect: true }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: Fone, isCorrect: false }
+      { id: "a", src: Fone, isCorrect: true }, //Vazio para colocar o link yt depois!!
+      { id: "b", src: Gabinete, isCorrect: false }
     ]
   },
   {
@@ -25,7 +24,7 @@ const questionsData = [
     word: "Monitor",
     options: [
       { id: "a", src: Gabinete, isCorrect: false }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: Monitor, isCorrect: true }
+      { id: "b", src: "Monitor", isCorrect: true }
     ]
   },
   {
