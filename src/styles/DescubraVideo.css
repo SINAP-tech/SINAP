@@ -132,3 +132,8 @@
 @media (max-width: 600px) {
   .options-grid { grid-template-columns: 1fr; }
 }
+
+.Prabaixo {
+  height: 100%;
+  width: 100%;
+}
