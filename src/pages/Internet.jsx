@@ -1,60 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+import {db} from '../firebase';
+import {collection, getDocs} from 'firebase/firestore'
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
-import '../styles/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
 import VoltarArrow from "../components/button-back";
 
+import '../styles/videoCSS.css'
 
 export default function Internet(){
    /* Aqui ta criando a const pra barra de pesquisa. */
     const [busca, setBusca] = useState("");
+    const [videos, setVideos] = useState([]);
 
-    const VideosData = [
-      {
-        titulo: 'Internet',
-        descricao: 'Aprenda o sinal de internet.',
-        topicos: ['WWW, HTTP'],
-        videoUrl: 'https://youtu.be/Rn5ey7TjpeM'
-      },
-      {
-        titulo: 'Informática',
-        descricao: 'Aprenda o sinal de Informática',
-        topicos: ['informática'],
-        videoUrl: 'https://youtu.be/-us0MzXF5P4'
-      },
-      {
-        titulo: 'E-mails e sites',
-        descricao: 'Aprenda o sinal de E-mail e Site',
-        topicos: ['Login em sites'],
-        videoUrl: 'https://youtu.be/QM2bxpYznNk'
-      },
-      {
-        titulo: 'Vírus e Anti-vírus',
-        descricao: 'Aprenda o sinal de Vírus e Anti-vírus',
-        topicos: ['Segurança'],
-        videoUrl: 'https://youtu.be/2GgajVPVRxw'
-      },
-      {
-        titulo: 'Wifi e Pendrive',
-        descricao: 'Aprenda o sinal de Wi-fi e Pendrive.',
-        topicos: ['Segurança'],
-        videoUrl: 'https://youtu.be/RNbXqiw94J0'
-      },
-      {
-        titulo: 'Roteador',
-        descricao: 'Aprenda o sinal de Roteador.',
-        topicos: ['Segurança'],
-        videoUrl: 'https://youtu.be/0xihxD2ijM0'
-      },
-      {
-        titulo: 'Fone de Ouvido',
-        descricao: 'Aprenda o sinal de Fone de Ouvido.',
-        topicos: ['Música'],
-        videoUrl: 'https://youtu.be/oCpcsKoT11c'
-      },
-]
+//Useeffect para o BD pegar os vídeos e por no site
+    useEffect(() => {
+      async function carregar(){
+        try{
+          const querySnapshot = await getDocs(collection(db, 'videos'));
+          
+          const lista=[];
+
+
+          if(querySnapshot){
+            
+            querySnapshot.forEach((doc) => {
+              lista.push({
+                id: doc.id,
+                ...doc.data()
+              })
+            })
+          }
+          setVideos(lista)
+        }
+        catch{
+          console.log(Error)
+        }
+      }
+      carregar()
+    }, []);
+
+
 
   // normaliza texto (remove acento e caixa)
   const normalize = (str = "") =>
@@ -62,7 +51,8 @@ export default function Internet(){
 
   const q = normalize(busca.trim());
 
-  const videosFiltrados = VideosData.filter(video => {
+  const internetVideos = videos.filter((video) => video.categoria === 'Internet')
+  const videosFiltrados = internetVideos.filter(video => {
     if (!q) return true; // busca vazia → mostra tudo
 
     return (

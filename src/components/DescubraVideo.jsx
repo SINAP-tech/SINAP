@@ -116,7 +116,7 @@ export default function DescubraVideo() {
                         ${showWrong ? "wrong-border" : ""}`}
                       onClick={() => handleSelect(opt)}
                     >
-                   '<video autoPlay loop muted playsInline>
+                   <video autoPlay loop muted playsInline>
                       <source src={opt.src} type="video/mp4" />
                     </video>
                     </div>

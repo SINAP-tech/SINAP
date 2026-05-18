@@ -1,73 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import {db} from '../firebase';
+import {collection, getDocs} from 'firebase/firestore'
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
-import '../styles/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
 import VoltarArrow from "../components/button-back";
+
+import '../styles/videoCSS.css'
+
 
 
 export default function Hardware(){
   /* Aqui ta criando a const pra barra de pesquisa. */
   const [busca, setBusca] = useState("");
+  const [videos, setVideos] = useState([]);
   
-  const VideosData = [
-    {
-      titulo: 'Hardware',
-      descricao: 'Aprenda o sinal de Hardware.',
-      topicos: ['A Parte Física'],
-      videoUrl: 'https://youtu.be/zZC8_aUMiEM'
-    },
-    {
-      titulo: 'Placa-mãe e Processador',
-      descricao: 'Saiba como fazer o sinal de "placa-mãe" e de "Processador".',
-      topicos: ['Placa-mãe'],
-      videoUrl: 'https://youtu.be/D69FC-0yRn0'
-    },
-    {
-      titulo: 'HD e RAM',
-      descricao: 'Entenda como fazer o sinal de HD e memória RAM.',
-      topicos: ['Memória Permanente'],
-      videoUrl: 'https://youtu.be/Y_FHabqUd9M'
-    },
-    {
-      titulo: 'Periféricos',
-      descricao: 'Aprenda a falar os periféricos.',
-      topicos: ['Mouse e teclado'],
-      videoUrl: 'https://youtu.be/EPMi33vhNIQ'
-    },
-    {
-      titulo: 'Placa de vídeo',
-      descricao: 'Aprenda o sinal de "Placa de Vídeo"',
-      topicos: ['GPU'],
-      videoUrl: 'https://youtu.be/v3ha45fak5Y'
-    },
-    {
-      titulo: 'Fonte de Alimentação',
-      descricao: 'Aprenda o sinal de "Fonte".',
-      topicos: ['Fonte'],
-      videoUrl: 'https://youtu.be/PvJIPbrMe3Q'
-    },
-    {
-      titulo: 'Gabinete e Monitor',
-      descricao: 'Saiba o sinal de Gabinete.',
-      topicos: ['Case'],
-      videoUrl: 'https://youtu.be/EGo9Z0g-0ww'
-    },
-    {
-      titulo: 'Cooler',
-      descricao: 'Saiba o sinal de Cooler.',
-      topicos: ['Ventoinha'],
-      videoUrl: 'https://youtu.be/xt66O60i488'
-    },
-]
+      useEffect(() => {
+        async function carregar(){
+
+            try{
+
+                const querySnapshot = await getDocs(collection(db, 'videos'));
+                
+                const lista = [];
+                
+                
+                if(querySnapshot){
+                    
+                    querySnapshot.forEach((doc) => {
+                        lista.push({
+                            id: doc.id,
+                            ...doc.data()
+                        });
+                    });
+                }
+             setVideos(lista)
+            }
+            catch{
+                console.log(Error)
+            }
+        }
+        carregar()
+    }, []);
   // normaliza texto (remove acento e caixa)
   const normalize = (str = "") =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   const q = normalize(busca.trim());
 
-  const videosFiltrados = VideosData.filter(video => {
+  const hardwareVideos = videos.filter((video) => video.categoria === 'hardware' )
+
+  const videosFiltrados = hardwareVideos.filter(video => {
     if (!q) return true; // busca vazia → mostra tudo
 
     return (
@@ -124,8 +110,5 @@ export default function Hardware(){
               </div>
         <Footer/>
         </>
-
-        /* ok, pensa, ce precisa de uma tela que mostre os videos naquela estrutura, ou seja, ce precisa salvar aquela estrutura em o projeto e depois 
-        modificar para receber os caminhos para vir os caminhos, salva aqui a estrutura dos videos modifico a estrutura e retiro o objeto*/
     )
 } 

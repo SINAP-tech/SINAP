@@ -1,50 +1,47 @@
-import React, { useState } from "react";  
+import React, { useEffect, useState } from "react";  
+
+import {db} from '../firebase';
+import {collection, getDocs} from 'firebase/firestore'
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import VideoComp from "../components/videosComp";
-import '../styles/videoCSS.css'
 import SearchBar from "../components/barrapesquisa";
 import VoltarArrow from "../components/button-back";
+
+import '../styles/videoCSS.css'
 
 
 export default function Softwares(){
    /* Aqui ta criando a const pra barra de pesquisa. */
-   //Espero que funcione com vídeos listados...
     const [busca, setBusca] = useState("");
-  
-    const VideosData = [
-    {
-      titulo: 'Software',
-      descricao: 'Aprenda o sinal de software.',
-      topicos: ['Softwares'],
-      videoUrl: 'https://youtu.be/B3hNTyK1S0w'
-    },
-    {
-      titulo: 'Sistemas Operacionais(S.O).',
-      descricao: 'Aprenda o sinal de Sistema Operacional',
-      topicos: ['Linux, Window, Mac'],
-      videoUrl: 'https://youtu.be/rwLl2yuvxzk'
-    },
-    {
-      titulo: 'Aplicativos',
-      descricao: 'Aprenda o sinal de App.',
-      topicos: ['App'],
-      videoUrl: 'https://youtu.be/XyTf4zAeWiA'
-    },
-    {
-      titulo: 'Navegador de Internet',
-      descricao: 'Aprenda o sinal de Navegador',
-      topicos: ['Explorer, Chrome'],
-      videoUrl: 'https://youtu.be/WDV8y7GAnAA'
-    },
-    {
-      titulo: 'Interface Gráfica',
-      descricao: 'Aprenda o sinal de interface gráfica',
-      topicos: ['UI(User Interface)'],
-      videoUrl: 'https://youtu.be/P3WylZgEu_s'
-    },
-    // Precisamos de ideias?
-]
+
+  //const para receber os vídeos
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+      async function carregar(){
+
+        try{
+          const querySnapshot = await getDocs(collection(db, 'videos'))
+          const lista = [];
+
+          if(querySnapshot){
+            querySnapshot.forEach((doc) => {
+              lista.push({
+                id: doc.id,
+                ...doc.data()
+              })
+            })
+          }
+          setVideos(lista)
+        }
+        catch{
+          console.log(Error)
+        }
+      }
+      carregar()
+    }, [])
 
  // normaliza texto (remove acento e caixa)
   const normalize = (str = "") =>
@@ -52,7 +49,9 @@ export default function Softwares(){
 
   const q = normalize(busca.trim());
 
-  const videosFiltrados = VideosData.filter(video => {
+  const softwareVideos = videos.filter((video) => video.categoria === 'Software')
+
+  const videosFiltrados = softwareVideos.filter(video => {
     if (!q) return true; // busca vazia → mostra tudo
 
     return (
