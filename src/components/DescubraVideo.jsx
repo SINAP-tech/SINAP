@@ -4,8 +4,8 @@ import Header from "./Header";
 //import {getEmbedURL} from '../utils/yt';
 
 import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4';
-import Fone from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
-//import Monitor from '../Gifs/Gif Monitor OTIMIZADO.gif';
+import Fones from '../Gifs/Gif Fone de Ouvido OTIMIZADO.mp4';
+import Monitor from '../Gifs/Monitor OTIMIZADO.mp4';
 import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.mp4';
 
 import "../styles/DescubraVideo.css";
@@ -15,7 +15,7 @@ const questionsData = [
     id: 1,
     word: "Mouse",
     options: [
-      { id: "a", src: Fone, isCorrect: true }, //Vazio para colocar o link yt depois!!
+      { id: "a", src: Mouse, isCorrect: true }, //Vazio para colocar o link yt depois!!
       { id: "b", src: Gabinete, isCorrect: false }
     ]
   },
@@ -24,14 +24,14 @@ const questionsData = [
     word: "Monitor",
     options: [
       { id: "a", src: Gabinete, isCorrect: false }, //Vazio para colocar o link yt depois!!
-      { id: "b", src: "Monitor", isCorrect: true }
+      { id: "b", src: Monitor, isCorrect: true }
     ]
   },
   {
     id: 3,
     word: "Fone de Ouvido",
     options: [
-      { id: "a", src: Fone, isCorrect: true }, //Vazio para colocar o link yt depois!!
+      { id: "a", src: Fones, isCorrect: true }, //Vazio para colocar o link yt depois!!
       { id: "b", src: Mouse, isCorrect: false }
     ]
   }
@@ -102,7 +102,7 @@ export default function DescubraVideo() {
                 <span>{currentQuestion.word}</span>
               </div>
 
-              <div className="options-grid">
+                <div className="options-grid">
                 {currentQuestion.options.map((opt) => {
                   const isSelected = selectedId === opt.id;
                   const showCorrect = selectedId && opt.isCorrect;
@@ -110,7 +110,7 @@ export default function DescubraVideo() {
 
                   return (
                     <div
-                      key={opt.id}
+                      key={`${currentQuestion.id}-${opt.id}`}
                       className={`option-card 
                         ${showCorrect ? "correct-border" : ""} 
                         ${showWrong ? "wrong-border" : ""}`}
@@ -133,7 +133,7 @@ export default function DescubraVideo() {
                     {currentQuestion.options.find(o => o.id === selectedId).isCorrect 
                       ? "✔️ Excelente! Você acertou." 
                       : "❌ Ops! Esse não é o sinal correto."}
-                  </div>
+                    </div>
 
                   <button onClick={handleNext} className="btn-next">
                     {currentIdx + 1 < perguntas.length ? "Próxima Pergunta" : "Finalizar ✔"}

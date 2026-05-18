@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../styles/QuizCSS.css";
-import {getEmbedURL} from '../utils/yt';
+//import {getEmbedURL} from '../utils/yt';
 
 import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4'
 import Teclado from '../Gifs/Gif Teclado OTIMIZADO.mp4'
-//import Monitor from '../Gifs/Gif Monitor.mp4'
+import Monitor from '../Gifs/Monitor OTIMIZADO.mp4'
 import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.mp4'
 
 const perguntasIniciais = [
@@ -24,7 +24,7 @@ const perguntasIniciais = [
   },
   {
     id: 3,
-    video: "Monitor", //Vazio para colocar o link yt depois!!
+    video: Monitor, //Vazio para colocar o link yt depois!!
     pergunta: "Qual conceito este sinal representa?",
     alternativas: ["Monitor", "Gabinete", "Teclado", "Mouse"],
     correta: "Monitor",
@@ -107,11 +107,19 @@ export default function QuizComp() {
                 <h3>{perguntaAtual.pergunta}</h3>
               </div>
               
-              <img
-                  key={perguntaAtual.id}
-                  src={getEmbedURL(perguntaAtual.video)}
-                  className="video-libras-quiz"
-              />
+              
+              <video
+                key={perguntaAtual.id}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="video-libras-quiz"
+              >
+                <source src={perguntaAtual.video} type="video/mp4" />
+              </video>
+
+            
 
               <div className="opcoes-grid">
                 {perguntaAtual.alternativas.map((opcao) => {
@@ -122,14 +130,14 @@ export default function QuizComp() {
                   }
 
                   return (
-                    <button
-                      key={opcao}
-                      className={`btn-opcao ${classeFeedback}`}
-                      onClick={() => escolherOpcao(opcao)}
-                      disabled={respondido}
-                    >
-                      {opcao}
-                    </button>
+                <button
+                  key={`${perguntaAtual.id}-${opcao}`}
+                  className={`btn-opcao ${classeFeedback}`}
+                  onClick={() => escolherOpcao(opcao)}
+                  disabled={respondido}
+                >
+                  {opcao}
+                </button>
                   );
                 })}
               </div>

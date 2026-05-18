@@ -59,14 +59,14 @@
   justify-content: center;
   width: 100%;
   margin-bottom: 30px;
+ 
 }
 
 .sign-tile {
   background-color: #1e293b;
   border-radius: 12px;
-  padding: 6px;
-  width: 180px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   cursor: grab;
   position: relative;
   margin-bottom: 15px;
@@ -136,4 +136,9 @@
 
 @media (max-width: 600px) {
   .arrasta-grid-game { flex-direction: column; align-items: center; }
+}
+
+.Pracima {
+  height: 150px;
+  width: 150px
 }
