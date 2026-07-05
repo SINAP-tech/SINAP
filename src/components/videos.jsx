@@ -1,6 +1,8 @@
-import '../styles/JogosCSS.css';
 import { Link } from 'react-router-dom';
-import Videosyou from "./videosyou";
+
+import Videosyou from './videosyou';
+
+import '../styles/JogosCSS.css';
 
 export default function Videos() {
 

@@ -1,7 +1,8 @@
-import QuizComp from "./QuizComp.jsx";
-import Arrasta from "./Arrasta.jsx";
-import DescubraVideo from "./DescubraVideo.jsx";
-import '../styles/modal.css'
+import QuizComp from '../QuizComp.jsx';
+import Arrasta from "../Arrasta.jsx";
+import DescubraVideo from "../DescubraVideo.jsx";
+
+import '../../styles/modal.css'
 
 export default function Modal({jogoSelecionado, fechar}){
     const jogos = {

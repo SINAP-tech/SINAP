@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import {db} from '../firebase';
 import {collection, getDocs} from 'firebase/firestore'
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/navbar/Header";
+import Footer from "../components/navbar/Footer";
 import VideoComp from "../components/videosComp";
-import SearchBar from "../components/barrapesquisa";
-import VoltarArrow from "../components/button-back";
+import SearchBar from "../components/button/barrapesquisa";;
+import VoltarArrow from "../components/input/button-back";
 
 import '../styles/videoCSS.css'
 

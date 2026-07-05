@@ -1,6 +1,7 @@
 import React from "react"
-import '../styles/videoCSS.css';
 import { Link } from "react-router-dom";
+
+import '../styles/videoCSS.css';
 
 export default function Videosyou({titulo, descricao, videoUrl, caminho}){
     let embedURL = videoUrl;

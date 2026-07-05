@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
+
+import Header from "./navbar/Header";
 //import {getEmbedURL} from '../utils/yt';
 
 import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4' 

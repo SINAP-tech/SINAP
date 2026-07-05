@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "../styles/QuizCSS.css";
 //import {getEmbedURL} from '../utils/yt';
 
 import Mouse from '../Gifs/Gif Mouse OTIMIZADO.mp4'
 import Teclado from '../Gifs/Gif Teclado OTIMIZADO.mp4'
 import Monitor from '../Gifs/Monitor OTIMIZADO.mp4'
 import Gabinete from '../Gifs/Gif Gabinete OTIMIZADO.mp4'
+
+import "../styles/QuizCSS.css";
 
 const perguntasIniciais = [
   {

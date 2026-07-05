@@ -1,11 +1,12 @@
 import React from "react";
-import '../styles/Contato.css'
-import Form from "../components/Form";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import IconEmail from "../assets/email-icon.png";
-import VoltarArrow from '../components/button-back';
 
+import Form from "../components/Form";
+import Header from "../components/navbar/Header";
+import Footer from "../components/navbar/Footer";
+import IconEmail from "../assets/email-icon.png";
+import VoltarArrow from "../components/input/button-back";
+
+import '../styles/Contato.css'
 
 export default function Contato(){
     return(

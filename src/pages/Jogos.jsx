@@ -1,9 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
+import Header from '../components/navbar/Header.jsx';
+import Footer from '../components/navbar/Footer.jsx';
+import JogosComp from '../components/button/JogosComp.jsx';
+import VoltarArrow from '../components/input/button-back.jsx';
+
 import '../styles/JogosCSS.css';
-import JogosComp from '../components/JogosComp.jsx';
-import VoltarArrow from '../components/button-back.jsx';
 
 export default function Jogos(){
     return(

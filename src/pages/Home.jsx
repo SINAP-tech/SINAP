@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "../components/Header";
-import Banner from "../components/Banner";
+
+import Header from "../components/navbar/Header";
+import Banner from "../components/navbar/Banner";
 import IntroSection from "../components/IntroSection";
 import InclusaoSection from "../components/InclusaoSection";
 import FeaturesSection from "../components/FeaturesSection";
-import Footer from "../components/Footer";
+import Footer from "../components/navbar/Footer";;
+
 import "../styles/Home.css";
 
 function Home() {

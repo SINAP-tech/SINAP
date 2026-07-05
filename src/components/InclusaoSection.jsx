@@ -1,6 +1,8 @@
 import React from "react";
-import "../styles/Home.css";
+
 import logoBanner from "../assets/logo-banner.png";
+
+import "../styles/Home.css";
 
 function InclusaoSection() {
   return (

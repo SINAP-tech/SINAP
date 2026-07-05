@@ -1,6 +1,8 @@
 import React from "react";
-import '../styles/Conceitos.css';
-import VoltarArrow from "./button-back";
+
+import VoltarArrow from "../input/button-back";
+
+import '../../styles/Conceitos.css';
 
 
 export default function Cabecalho() {

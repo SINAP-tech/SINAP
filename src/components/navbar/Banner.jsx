@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Home.css";
-import BannerHomeImage from '../assets/ReditBanner.png'
+
+import BannerHomeImage from '../../assets/ReditBanner.png'
+
+import "../../styles/Home.css";
 
 function Banner() {
   const navigate = useNavigate();

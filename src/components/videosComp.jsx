@@ -1,4 +1,5 @@
 import React from "react"
+
 import '../styles/videoCSS.css';
 
 export default function VideoComp({titulo, descricao, topicos, videoUrl}){
