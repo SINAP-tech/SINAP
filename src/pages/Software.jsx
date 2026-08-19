@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";  
 
-import {db} from '../firebase';
+import {db} from '../firebase/config';
 import {collection, getDocs} from 'firebase/firestore'
 
 import Header from "../components/navbar/Header";
@@ -24,6 +24,7 @@ export default function Softwares(){
 
         try{
           const querySnapshot = await getDocs(collection(db, 'videos'))
+          console.log("Quantidade de documentos:", querySnapshot.size);
           const lista = [];
 
           if(querySnapshot){
@@ -32,9 +33,12 @@ export default function Softwares(){
                 id: doc.id,
                 ...doc.data()
               })
+            console.log(lista);
             })
+
           }
           setVideos(lista)
+          console.log("Estado antes do set:", lista);
         }
         catch{
           console.log(Error)
@@ -61,7 +65,7 @@ export default function Softwares(){
     );
   });
   
-
+  console.log(videos);  
     return (
   <>
     <Header />

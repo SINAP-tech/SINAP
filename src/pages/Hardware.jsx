@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import {db} from '../firebase';
+import {db} from '../firebase/config';
 import {collection, getDocs} from 'firebase/firestore'
 
 import Header from "../components/navbar/Header";
@@ -40,7 +40,7 @@ export default function Hardware(){
              setVideos(lista)
             }
             catch{
-                console.log(Error)
+                console.error(Error)
             }
         }
         carregar()
