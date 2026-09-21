@@ -11,4 +11,4 @@ import { auth } from '../firebase/config';
 
 export async function login(email, senha) {
     return await signInWithEmailAndPassword(auth, email, senha)   
-}
+}   
