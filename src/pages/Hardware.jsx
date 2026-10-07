@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import {db} from '../firebase/config';
-import {collection, getDocs} from 'firebase/firestore'
+import { getVideos } from "../services/videoService";
 
 import Header from "../components/navbar/Header";
 import Footer from "../components/navbar/Footer";
@@ -22,25 +21,16 @@ export default function Hardware(){
         async function carregar(){
 
             try{
-
-                const querySnapshot = await getDocs(collection(db, 'videos'));
                 
-                const lista = [];
+                const lista = await getVideos('Hardware');
                 
-                
-                if(querySnapshot){
-                    
-                    querySnapshot.forEach((doc) => {
-                        lista.push({
-                            id: doc.id,
-                            ...doc.data()
-                        });
-                    });
-                }
-             setVideos(lista)
+                setVideos(lista)
             }
-            catch{
-                console.error(Error)
+            catch(error){
+                console.error(
+                  'Erro ao carregar os vídeos.',
+                  error
+                )
             }
         }
         carregar()
@@ -51,9 +41,7 @@ export default function Hardware(){
 
   const q = normalize(busca.trim());
 
-  const hardwareVideos = videos.filter((video) => video.categoria === 'hardware' )
-
-  const videosFiltrados = hardwareVideos.filter(video => {
+  const videosFiltrados = videos.filter(video => {
     if (!q) return true; // busca vazia → mostra tudo
 
     return (

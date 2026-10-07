@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";  
 
-import {db} from '../firebase/config';
-import {collection, getDocs} from 'firebase/firestore'
+import { getVideos } from "../services/videoService";
 
 import Header from "../components/navbar/Header";
 import Footer from "../components/navbar/Footer";
@@ -18,44 +17,39 @@ export default function Softwares(){
 
   //const para receber os vídeos
     const [videos, setVideos] = useState([]);
-
+    
     useEffect(() => {
-      async function carregar(){
 
-        try{
-          const querySnapshot = await getDocs(collection(db, 'videos'))
-          console.log("Quantidade de documentos:", querySnapshot.size);
-          const lista = [];
+          async function carregar() {
 
-          if(querySnapshot){
-            querySnapshot.forEach((doc) => {
-              lista.push({
-                id: doc.id,
-                ...doc.data()
-              })
-            console.log(lista);
-            })
+              try {
+
+                  const lista = await getVideos('Software')
+
+                  setVideos(lista)
+
+              } catch (error) {
+
+                  console.error(
+                      'Erro ao carregar vídeos:',
+                      error
+                  )
+
+              }
 
           }
-          setVideos(lista)
-          console.log("Estado antes do set:", lista);
-        }
-        catch{
-          console.log(Error)
-        }
-      }
-      carregar()
-    }, [])
 
- // normaliza texto (remove acento e caixa)
+          carregar()
+
+      }, [])
+
+ // normaliza texto (remove acento e caixa) barra de pesquis
   const normalize = (str = "") =>
     str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
   const q = normalize(busca.trim());
 
-  const softwareVideos = videos.filter((video) => video.categoria === 'Software')
-
-  const videosFiltrados = softwareVideos.filter(video => {
+  const videosFiltrados = videos.filter(video => {
     if (!q) return true; // busca vazia → mostra tudo
 
     return (

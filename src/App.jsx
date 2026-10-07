@@ -12,6 +12,9 @@ import QuizLibras from './components/QuizComp';
 import Arrasta from './components/Arrasta';
 import DescubraVideo from "./components/DescubraVideo";
 import Login from "./pages/login/Login";
+import Admin from './pages/admin/Admin.jsx'
+
+import ProtectedRoute from "./components/ProtectRoute/ProtectRoute";
 
 function App() {
   return (
@@ -27,7 +30,12 @@ function App() {
         <Route path="/quiz-libras" element={<QuizLibras />} />
         <Route path="/arrasta-solta" element={<Arrasta />} />
         <Route path="/descubra-pelo-video" element={<DescubraVideo />} />
-        <Route path="/loginpage" element={<Login/>} />
+        <Route path="/login" element={<Login/>} />
+            <Route path="/admin" element={
+              <ProtectedRoute>
+                <Admin/>
+              </ProtectedRoute>
+            } />
       </Routes>
     </BrowserRouter>
   );

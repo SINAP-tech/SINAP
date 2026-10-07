@@ -1,0 +1,482 @@
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background: #eff6ff;
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.login-decoration {
+    position: relative;
+
+    width: 42%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #2563EB,
+        #1D4ED8
+    );
+}
+
+.login-logo {
+    width: 180px;
+    max-width: 80%;
+
+    margin-bottom: 24px;
+
+    object-fit: contain;
+    border-radius: 100%;
+    filter: drop-shadow(
+        0 8px 20px rgba(0, 0, 0, 0.12)
+    );
+}
+
+.login-banner {
+    width: 100%;
+    max-width: 500px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-top: 8px;
+
+    filter: drop-shadow(
+        0 15px 25px rgba(0, 0, 0, 0.12)
+    );
+}
+
+.login-brand {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 30px;
+
+    color: white;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-brand h1 {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 42px;
+    font-weight: 900;
+
+    line-height: 1.15;
+}
+
+.login-brand p {
+    margin: 12px 0 22px;
+
+    max-width: 400px;
+
+    color: #DBEAFE;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.login-brand span {
+    display: block;
+    max-width: 300px;
+    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* =========================
+   DECORAÇÃO
+========================= */
+
+.login-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.login-circle-one {
+    width: 340px;
+    height: 340px;
+
+    top: -130px;
+    right: -110px;
+
+    background: rgba(255, 255, 255, 0.10);
+}
+.login-circle-two {
+    width: 280px;
+    height: 280px;
+
+    bottom: -110px;
+    left: -100px;
+
+    background: rgba(147, 197, 253, 0.18);
+}
+.login-circle-three {
+    width: 180px;
+    height: 180px;
+
+    top: 18%;
+    right: 10%;
+
+    border: 2px dashed rgba(255, 255, 255, 0.20);
+}
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.login-content {
+    width: 58%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 42px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px rgba(24, 59, 112, 0.12);
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.login-header {
+    margin-bottom: 32px;
+}
+
+.login-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: #dbeafe;
+    color: #1d4f91;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.login-header h2 {
+    margin: 0;
+
+    color: #173b70;
+
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 900;
+}
+
+.login-header p {
+    margin-top: 12px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   CAMPOS
+========================= */
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+.login-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.login-field input {
+    width: 100%;
+    height: 54px;
+
+    box-sizing: border-box;
+
+    padding: 0 16px;
+
+    border: 1px solid #d8e0ec;
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #f9fbff;
+
+    color: #1f2937;
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.login-field input::placeholder {
+    color: #9ca3af;
+}
+
+.login-field input:focus {
+    border-color: #2563a8;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 168, 0.1);
+}
+
+/* =========================
+   SENHA
+========================= */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 52px;
+}
+.password-toggle {
+    position: absolute;
+
+    top: 15%;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent !important;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    opacity: 0.7;
+
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+    color: #0878F9;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.login-button {
+    width: 100%;
+    height: 54px;
+
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 0;
+    border-radius: 14px;
+
+    background: #173b70;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        box-shadow 0.2s;
+}
+
+.login-button:hover {
+    background: #12305a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 25px rgba(23, 59, 112, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.login-spinner {
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: login-spin 0.7s linear infinite;
+}
+
+@keyframes login-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   ERRO
+========================= */
+
+.login-error {
+    margin-top: 16px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .login-page {
+        display: block;
+    }
+
+    .login-decoration {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .login-brand {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .login-brand h1 {
+        font-size: 48px;
+    }
+
+    .login-brand p {
+        font-size: 20px;
+    }
+
+    .login-brand span {
+        display: none;
+    }
+
+    .login-content {
+        width: 100%;
+        min-height: calc(100vh - 220px);
+
+        padding: 24px;
+    }
+
+    .login-card {
+        max-width: 520px;
+        padding: 30px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .login-decoration {
+        min-height: 180px;
+    }
+
+    .login-brand h1 {
+        font-size: 40px;
+    }
+
+    .login-brand p {
+        font-size: 18px;
+    }
+
+    .login-content {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 26px 20px;
+        border-radius: 22px;
+    }
+
+    .login-header h2 {
+        font-size: 28px;
+    }
+}
