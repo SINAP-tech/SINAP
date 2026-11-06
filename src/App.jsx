@@ -1,0 +1,43 @@
+import React from "react";
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Conceitos from "./pages/Conceitos";
+import Contato from "./pages/Contato";
+import Jogos from "./pages/Jogos";
+import Hardware from "./pages/Hardware";
+import Software from "./pages/Software";
+import Internet from "./pages/Internet";
+import QuizLibras from './components/QuizComp';
+import Arrasta from './components/Arrasta';
+import DescubraVideo from "./components/DescubraVideo";
+import Login from "./pages/login/Login";
+import Admin from './pages/admin/Admin.jsx'
+
+import ProtectedRoute from "./components/ProtectRoute/ProtectRoute";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jogos" element={<Jogos/>} />
+        <Route path="/conceitos" element={<Conceitos />} />
+        <Route path="/contato" element={<Contato/>} />
+        <Route path="/hardwarevideos" element={<Hardware/>} />
+        <Route path="/softwarevideos" element={<Software/>} />
+        <Route path="/internetvideos" element={<Internet/>} />
+        <Route path="/quiz-libras" element={<QuizLibras />} />
+        <Route path="/arrasta-solta" element={<Arrasta />} />
+        <Route path="/descubra-pelo-video" element={<DescubraVideo />} />
+        <Route path="/login" element={<Login/>} />
+            <Route path="/admin" element={
+              <ProtectedRoute>
+                <Admin/>
+              </ProtectedRoute>
+            } />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;

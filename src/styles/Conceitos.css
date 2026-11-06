@@ -1,0 +1,293 @@
+:root {
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  --indigo-100: #E0E7FF;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blue-50);
+  color: var(--gray-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   CABEÇALHO FIXO DO TOPO (.cabeca)
+   ========================================== */
+.original-page-heading {
+  background-color: var(--blue-600); /* Fundo Azul Vibrante (#2563EB) */
+  padding: 24px 60px 40px;
+  margin-top: 65px;
+  box-sizing: border-box;
+  text-align: left;
+  width: 100%; /* Mantém a largura total de ponta a ponta */
+}
+
+.original-page-heading-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Container da Seta de Voltar */
+.back-wrapper {
+  margin-bottom: 12px;
+}
+
+/* Seta de voltar convertida para branco */
+.back-wrapper button img,
+.btn-back img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+  /* Cor azul vibrante (var(--blue-600) / #2563EB) */
+  filter: invert(32%) sepia(85%) saturate(2186%) hue-rotate(212deg) brightness(97%) contrast(93%) !important;
+}
+
+/* Regra específica para quando a seta estiver sobre fundo escuro (BRANCA na página de Conceitos) */
+.back-wrapper.seta-branca button img,
+.back-wrapper.seta-branca .btn-back img {
+  /* Força a imagem a ficar 100% branca */
+  filter: brightness(0) invert(1) !important;
+}
+/* Tag Superior: BIBLIOTECA DE APRENDIZAGEM */
+.eyebrow-tag {
+  color: var(--blue-200); /* Azul claro em alto contraste */
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Título Principal */
+.original-page-heading h1 {
+  color: var(--white); /* Texto em Branco (#FFFFFF) */
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+
+/* Parágrafo Descritivo */
+.original-page-heading p {
+  color: var(--blue-100); /* Azul claro suave para leitura */
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 820px;
+}
+
+
+@media (max-width: 768px) {
+  .original-page-heading {
+    padding: 16px 20px 24px;
+    margin-top: 55px;
+  }
+
+  .original-page-heading h1 {
+    font-size: 30px;
+  }
+
+  .original-page-heading p {
+    font-size: 15px;
+  }
+}
+/* ==========================================
+   SEÇÃO DE VÍDEOS / CARDS
+   ========================================== */
+.pag {
+  background-color: var(--blue-50);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--blue-200);
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.05);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(30, 58, 138, 0.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 22px;
+  margin: 0;
+  color: var(--blue-900);
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--blue-600);
+}
+
+.descricao {
+  color: var(--gray-600);
+  font-size: 16px;
+}
+
+.video-box {
+  background-color: var(--blue-100);
+  border-radius: 12px;
+  padding: 40px 0;
+  text-align: center;
+  color: var(--blue-900);
+  font-weight: 500;
+}
+
+.libra-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.topicos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topicos-titulo {
+  font-weight: bold;
+  color: var(--blue-900);
+}
+
+.lista-topicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topico-tag {
+  background-color: var(--blue-100);
+  color: var(--blue-900);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.btn-libras {
+  background-color: var(--blue-600);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-libras:hover {
+  background-color: var(--blue-700);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================
+   SEÇÃO RECURSOS ADICIONAIS
+   ========================================== */
+.extra-secao {
+  margin-top: 60px;
+  background: var(--white);
+  border: 1px solid var(--blue-200);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(30, 58, 138, 0.05);
+}
+
+.extra-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 40px;
+}
+
+.extra-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.extra-item {
+  width: 250px;
+  text-align: center;
+}
+
+.extra-item h3 {
+  font-size: 18px;
+  color: var(--blue-900);
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.extra-item p {
+  color: var(--gray-600);
+  font-size: 14px;
+}
+
+.extra-icon {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  margin: 0 auto;
+}

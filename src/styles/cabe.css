@@ -1,0 +1,160 @@
+.content {
+  /* Aumenta a margem superior para empurrar o botão para baixo do Header fixo */
+  margin-top: 90px !important; 
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  background-color: transparent;
+  padding: 0;
+  
+  /* Garante que o botão fique em cima de qualquer camada se necessário */
+  position: relative;
+  z-index: 10;
+}
+
+.btn-back {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  width: auto !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-back:hover {
+  animation: none;
+  background-color: transparent !important;
+  transform: translateX(-3px);
+  opacity: 0.8;
+}
+
+.img {
+  height: 24px !important;
+  width: 24px !important;
+  object-fit: contain;
+  /* Cor azul vibrante (var(--blue-600) / #2563EB) */
+  filter: invert(32%) sepia(85%) saturate(2186%) hue-rotate(212deg) brightness(97%) contrast(93%);
+}
+
+@media (max-width: 768px) {
+  .content {
+    /* Ajuste para telas menores/celulares */
+    margin-top: 75px !important;
+    margin-left: 1rem;
+  }
+}
+/* ==========================================
+   BARRA DE PESQUISA MINIMALISTA & INTUITIVA
+   ========================================== */
+.search-container {
+  width: 100%;
+  max-width: 580px;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white, #ffffff);
+  border: 1.5px solid var(--blue-200, #bfdbfe);
+  border-radius: 12px;
+  padding: 4px 16px;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+/* Efeito Hover e Foco no Container */
+.search-wrapper:hover {
+  border-color: var(--blue-400, #60a5fa);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
+}
+
+.search-wrapper:focus-within {
+  border-color: var(--blue-600, #2563eb);
+  background-color: var(--white, #ffffff);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Ícone de Lupa interno */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-600, #2563eb);
+  margin-right: 12px;
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.search-wrapper:focus-within .search-icon {
+  color: var(--blue-700, #1d4ed8);
+}
+
+/* Input sem borda própria */
+.search-input {
+  flex: 1;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: var(--gray-900, #111827);
+  font-weight: 500;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: var(--gray-600, #4b5563);
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+/* Botão de Limpar (X) */
+.search-clear-btn {
+  background: transparent;
+  border: none;
+  color: var(--gray-600, #4b5563);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.search-clear-btn:hover {
+  background-color: var(--blue-100, #dbeafe);
+  color: var(--blue-900, #1e3a8a);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 100%;
+    margin: 14px 0;
+  }
+  
+  .search-wrapper {
+    padding: 2px 12px;
+  }
+  
+  .search-input {
+    font-size: 0.88rem;
+    padding: 8px 0;
+  }
+}

@@ -1,0 +1,779 @@
+/*  As cores ai ó, ó as cor aeeee */
+:root {
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  --indigo-100: #E0E7FF;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --white: #FFFFFF;
+}
+
+/* ---------- GERAL ----------  ai tem os bagui la tlg?*/
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--blue-50);
+  color: var(--gray-900);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #DBEAFE;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center; /* Centraliza tudo verticalmente */
+  justify-content: space-between; /* Esquerda: Logo/Título | Direita: Links */
+  padding: 0 40px;
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #bfdbfe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(37, 99, 235, 0.06);
+}
+
+/* Lado Esquerdo: Logo + Título */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  cursor: default; 
+  user-select: none; 
+}
+
+
+.header-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.header-left div,
+.header-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.header-title {
+  margin: 0 0 4px 0; 
+  color: #14213d;
+  font-size: 30px; 
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+
+.header-subtitle {
+  margin: 2px 0 0;
+  color: #14213d;
+  font-size: 11px;
+  font-weight: 500; 
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* Lado Direito: Navegação e Ícones */
+.nav-links,
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a,
+.nav-links .nav-item,
+.header-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 12px;
+  color: #40516a;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+/* Estilização dos Ícones SVG */
+.header-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nav-links .nav-item:hover,
+.header-navigation a:hover {
+  color: #2563eb;
+  background-color: transparent; 
+}
+
+.nav-links a.active,
+.nav-links .nav-item.active,
+.header-navigation a.active {
+  color: #2563eb;
+  background-color: transparent; /* Remove o fundo azul no estado ativo */
+  font-weight: 700;
+}
+/* ---------- BANNER ---------- */
+.home-hero {
+  padding-top: 5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #e0e7ff 100%);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-hero-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10px 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Lado Esquerdo: Imagem */
+.home-hero-image {
+  flex-shrink: 0;
+  max-width: 540px;
+  width: 100%;
+}
+
+.home-hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 24px rgba(30, 64, 175, 0.1));
+}
+
+/* Lado Direito: Conteúdo */
+.home-hero-content {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-hero-content h1 {
+  margin: 0 0 16px;
+  color: #0f172a;
+  font-size: clamp(44px, 4.6vw, 64px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+}
+
+.home-hero-content h1 em {
+  color: #2563eb;
+  font-style: normal;
+}
+
+.home-hero-content p {
+  margin: 0 0 20px;
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 540px;
+}
+
+.home-hero-content p .gray-text {
+  color: #334155;
+  font-weight: 700;
+}
+
+.home-hero-content p strong:last-child {
+  color: #2563eb;
+}
+
+/* Cards de Recursos */
+.hero-features {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.hero-feature-card {
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.hero-feature-card .blue-text {
+  color: #2563eb;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.icon-emoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Botão de Ação */
+.hero-cta-button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.28);
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .home-hero-container {
+    flex-direction: column; /* Mantém texto em cima e imagem embaixo em telas menores */
+    text-align: center;
+    padding: 20px 20px 30px;
+  }
+
+  .home-hero-content {
+    align-items: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+/* ---------- INTRO ---------- */
+.intro-section {
+  width: 100%;
+  max-width: 1240px; /* Mesma largura máxima da InclusaoSection */
+  margin: 0 auto;
+  padding: 60px 30px; /* Mesmos espaçamentos laterais */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.intro-container {
+  max-width: 100%; /* Permite expassamento total até o limite de 1240px */
+  margin: 0 auto;
+}
+
+.intro-section h2 {
+  color: #0f172a;
+  font-size: clamp(32px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin: 0 auto 20px auto;
+  max-width: 1000px; /* Título mais largo acompanhando o banner */
+}
+
+.intro-section p {
+  color: #475569;
+  font-size: 18px; /* Texto um pouco maior e mais legível */
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 1050px; /* Parágrafo mais longo e expandido nas laterais */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 40px 20px;
+  }
+  
+  .intro-section h2 {
+    font-size: 28px;
+  }
+  
+  .intro-section p {
+    font-size: 16px;
+  }
+}
+
+/* ---------- INCLUSÃO ---------- */
+.inclusao-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 50px auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.inclusao-container {
+  background: #1D4ED8; /* Tom exato do azul do Figma */
+  border-radius: 20px;
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.18);
+}
+
+/* Esquerda: Logo sem moldura/fundo branco */
+.inclusao-logo-wrapper {
+  flex-shrink: 0;
+}
+
+.inclusao-logo-symbol {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.22));
+}
+
+/* Centro: Texto */
+.inclusao-content {
+  flex: 1;
+  max-width: 580px;
+  text-align: left;
+}
+
+.inclusao-content h2 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.inclusao-content p {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Direita: Pílulas Empilhadas */
+.inclusao-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  min-width: 240px;
+}
+
+.inclusao-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.inclusao-badge:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateX(4px);
+}
+
+.inclusao-badge svg {
+  color: #bfdbfe;
+  flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+  .inclusao-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+  }
+
+  .inclusao-content {
+    text-align: center;
+  }
+
+  .inclusao-badges {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ---------- FEATURES ---------- */
+.features-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Aumentado margin-top de 60px para 100px para empurrar os cards mais para baixo */
+.features-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 100px; /* Empurra os cards bem mais para baixo */
+  margin-bottom: 90px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.12);
+}
+
+/* Banner de Fundo Azul Claro */
+.feature-card-banner.banner-blue-light {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  height: 150px;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Imagem mao.png no Fundo */
+.banner-bg-mao {
+  position: absolute;
+  right: 12px;
+  bottom: -6px;
+  height: 115px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.28;
+  pointer-events: none;
+  filter: brightness(0) saturate(100%) invert(29%) sepia(93%) saturate(2128%) hue-rotate(212deg) brightness(97%) contrast(92%);
+}
+
+/* Círculo Badge Centralizado */
+.feature-card-badge {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.12);
+  z-index: 2;
+}
+
+.badge-icon-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.blue-filter {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(93%) saturate(2128%) hue-rotate(212deg) brightness(97%) contrast(92%);
+}
+
+/* Conteúdo de Texto */
+.feature-card-content {
+  padding: 38px 22px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.feature-card-content h4 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+}
+
+.feature-card-content p {
+  margin: 0 0 20px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.feature-card-content .blue-tag {
+  margin-top: auto;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer-site {
+  background-color: #0f224a;
+  padding: 50px 60px 20px;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* Lado Esquerdo: Marca + Logo */
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 680px;
+}
+
+.footer-logo-symbol {
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.footer-brand-info h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.footer-subtitle {
+  margin: 6px 0 14px 0;
+  color: #a5c8ff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.footer-desc {
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 540px;
+}
+
+/* Lado Direito: Explore */
+.footer-nav {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.footer-nav h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 180ms ease;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+  max-width: 1240px;
+  margin: 40px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: left;
+}
+
+.footer-copyright {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Responsividade */
+@media (max-width: 820px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+/* ---------- FEATURES (Cards Superiores) ---------- */
+
+/* Container Pai do Sobre-nos */
+.Sobre-nos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Fundo branco como na imagem */
+  width: 100%;
+}
+
+.Sobre-nos h1 {
+  font-size: 2.5rem;
+  color: #2563EB; /* Tom de roxo/azul da imagem */
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.Sobre-nos > p {
+  color: #888;
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  font-size: 0.95rem;
+}
+
+/* Container dos Cards (Ajuste crucial) */
+.SecLayer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* Espaçamento entre os cards */
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Para não quebrar em telas menores */
+}
+
+/* O Card individual */
+.card-sobrenos {
+  background: #ffffff;
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Sombra suave identica a da imagem */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+/* Foto Redonda */
+.images-ph {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  /* Sombra interna leve na foto */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Textos dentro do Card */
+.nome {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  min-height: 50px; /* Garante alinhamento mesmo com nomes longos */
+  display: flex;
+  align-items: center;
+}
+
+.desc {
+  color: #2563EB;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.arroba {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
