@@ -51,8 +51,8 @@ export default function Videos() {
         <div className="extra-container">
           <div className="extra-item">
             <div className="extra-icon">📚</div>
-            <h3>Glossário em Libras</h3>
-            <p>Dicionário de termos técnicos com sinais em Libras</p>
+            <h3>Vídeos em Libras</h3>
+            <p>Vídeos com os termos técnicos com sinais em Libras</p>
           </div>
 
           <div className="extra-item">
