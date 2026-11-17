@@ -48,7 +48,6 @@ export default function JogosVideos() {
 
   return (
     <div className="jogos-page-wrapper">
-      <Header />
 
       {/* CABEÇALHO PADRÃO CONCEITOS */}
       <section className="original-page-heading">

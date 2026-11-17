@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+
+
 import Header from "../components/navbar/Header";
 import Footer from "../components/navbar/Footer";
 import VoltarArrow from "../components/input/button-back"; // Componente do botão de voltar
-import "../styles/Contato.css";
 
 import DaianeIMG from "../assets/DaianeIMG.png";
 import ThataIMG from "../assets/ThataIMG.jpeg";
 import LourencoIMG from "../assets/LourencoIMG.jpeg";
 import ArthurIMG from "../assets/ArthurIMG.jpeg";
+
+import "../styles/Contato.css";
 
 const teamMembers = [
   {
@@ -33,6 +38,11 @@ const teamMembers = [
 ];
 
 export default function Contato() {
+  
+  const [enviando, setEnviando] = useState(false);
+  const [erroEnvio, setErroEnvio] = useState("");
+
+  
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -41,10 +51,41 @@ export default function Contato() {
     message: "",
   });
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  if (enviando) return;
+
+  setEnviando(true);
+  setErroEnvio("");
+
+  try {
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        nome: form.name,
+        email: form.email,
+        assunto: form.subject,
+        mensagem: form.message,
+      },
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    );
+
     setSent(true);
+  } catch (error) {
+    console.error("Erro ao enviar formulário:", error);
+    setErroEnvio(
+      "Não foi possível enviar a mensagem. Tente novamente."
+    );
+  } finally {
+    setEnviando(false);
   }
+}
+
 
   function resetForm() {
     setSent(false);
@@ -55,6 +96,7 @@ export default function Contato() {
       message: "",
     });
   }
+
 
   return (
     <div className="contact-page-wrapper">
@@ -156,9 +198,21 @@ export default function Contato() {
                   />
                 </label>
 
-                <button type="submit" className="btn-figma-primary">
-                  Enviar
+                
+                {erroEnvio && (
+                  <p role="alert" style={{ color: "#b91c1c" }}>
+                    {erroEnvio}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  className="btn-figma-primary"
+                  disabled={enviando}
+                >
+                  {enviando ? "Enviando..." : "Enviar"}
                 </button>
+
               </form>
             )}
           </div>
@@ -172,7 +226,7 @@ export default function Contato() {
                 <span className="mail-icon">✉️</span>
                 <div>
                   <strong>E-mail</strong>
-                  <p>sinap98@gmail.com</p>
+                  <p>sinap9818@gmail.com</p>
                 </div>
               </div>
             </article>

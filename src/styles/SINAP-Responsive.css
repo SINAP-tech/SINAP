@@ -1,0 +1,411 @@
+/* ================================================================
+   SINAP • Responsividade v2 — para o design "intuitivo e padronizado"
+   Desktop mantido: alteracoes concentradas em <= 900px.
+   Este arquivo SUBSTITUI o antigo SINAP-Responsive.css; nao o acumule.
+   Importe uma unica vez no main.jsx, apos os estilos base.
+   ================================================================ */
+
+@media (max-width: 900px) {
+  /* HOME — novos nomes de classe do design atualizado */
+  .home-hero-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    padding: 24px 20px 34px;
+  }
+
+  .home-hero-content {
+    order: -1; /* a mensagem aparece antes da ilustracao no celular */
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-hero-image {
+    order: 1;
+    width: 100%;
+    max-width: 390px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .home-hero-content h1 {
+    font-size: clamp(2rem, 7.6vw, 3rem);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  .home-hero-content p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-features {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-feature-card {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .inclusao-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 26px 20px;
+    gap: 18px;
+  }
+
+  .inclusao-content {
+    text-align: center;
+    min-width: 0;
+  }
+
+  .inclusao-badges {
+    min-width: 0;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .features-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+    margin-bottom: 46px;
+  }
+
+  /* CONTATO — o form e os cards ficam empilhados em tablets */
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .contact-form-card,
+  .contact-side-cards {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Bases: conteudo nunca deve forcar largura maior que a viewport */
+  html, body, #root { max-width: 100%; }
+  img, video, iframe, svg { max-width: 100%; }
+
+  /* NAVBAR ATUAL: Header.jsx usa <header className="main-header">.
+     Em vez de esconder links, exibe todos os quatro em uma fileira. */
+  header.main-header {
+    position: sticky;
+    top: 0;
+    left: auto;
+    height: auto;
+    min-height: 0;
+    width: 100%;
+    z-index: 998;
+    padding: 9px 12px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+  }
+
+  header.main-header .header-left {
+    width: 100%;
+    justify-content: center;
+    gap: 9px;
+  }
+
+  header.main-header .header-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  header.main-header .header-title {
+    font-size: 21px;
+    margin: 0 0 2px;
+  }
+
+  header.main-header .header-subtitle {
+    font-size: 9px;
+    letter-spacing: .35px;
+    margin: 0;
+  }
+
+  header.main-header .nav-links {
+    width: 100%;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+  }
+
+  header.main-header .nav-links a {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    margin: 0;
+    padding: 5px 2px;
+    font-size: 11px;
+    line-height: 1.15;
+    white-space: normal;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  header.main-header .header-icon {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+  }
+
+  /* O header sticky agora participa do layout. Remova os espacos
+     reservados para o header antigo de posicao fixa. */
+  .home-hero { padding-top: 0; }
+  .original-page-heading,
+  .original-contact-heading,
+  .jogos-page-wrapper .original-page-heading {
+    margin-top: 0;
+  }
+
+  .original-page-heading,
+  .original-contact-heading {
+    padding: 24px 18px 28px;
+  }
+
+  .original-page-heading h1,
+  .original-contact-heading h1 {
+    font-size: clamp(1.75rem, 7.5vw, 2.25rem);
+    line-height: 1.18;
+  }
+
+  .original-page-heading p,
+  .original-contact-heading p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* VoltarArrow usa .content com margin-top !important no cabe.css */
+  .back-wrapper .content {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 12px;
+  }
+
+  /* HOME — sem comprimentos fixos nem imagens gigantes */
+  .home-hero-container { padding: 24px 16px 28px; }
+  .home-hero-image { max-width: 300px; }
+  .home-hero-content h1 { margin-bottom: 12px; }
+  .home-hero-content p { margin-bottom: 14px; }
+  .hero-cta-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .intro-section { padding: 34px 18px; }
+  .intro-section h2 { font-size: clamp(1.55rem, 6vw, 2rem); }
+  .intro-section p { font-size: 15px; }
+
+  .inclusao-section {
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+  .inclusao-logo-symbol { width: 80px; height: 80px; }
+  .inclusao-content h2 { font-size: 24px; }
+
+  .features-section { padding: 0 16px; }
+  .features-cards-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+    margin-bottom: 42px;
+  }
+  .features-cards-container .feature-card {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .Sobre-nos { padding: 34px 16px; }
+  .SecLayer { width: 100%; flex-direction: column; align-items: center; }
+  .SecLayer .card-sobrenos {
+    width: 100%;
+    max-width: 390px;
+    min-width: 0;
+    flex: none;
+    padding: 24px 18px;
+  }
+
+  /* RODAPE DO NOVO DESIGN */
+  .footer-site { padding: 32px 18px 22px; }
+  .footer-container { flex-direction: column; gap: 24px; }
+  .footer-brand { min-width: 0; gap: 12px; }
+  .footer-logo-symbol { width: 64px; height: 64px; }
+  .footer-brand-info { min-width: 0; }
+  .footer-brand-info h2 { font-size: 26px; }
+  .footer-bottom { margin-top: 24px; }
+
+  /* CONCEITOS / HARDWARE / SOFTWARE / INTERNET */
+  .pag { padding: 24px 16px; }
+  .cards-container { gap: 16px; }
+  .cards-container .card { width: 100%; min-width: 0; max-width: 100%; padding: 18px; }
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+    gap: 18px;
+    padding: 24px 16px;
+  }
+  .card-wrapper .card { max-width: 100%; min-width: 0; }
+  .card-wrapper .video-frame iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .card-header h2 { overflow-wrap: anywhere; }
+  .video-box { min-width: 0; }
+  .extra-secao { margin-top: 25px; padding: 28px 16px; }
+  .extra-container { display: grid; grid-template-columns: minmax(0,1fr); gap: 18px; }
+  .extra-item { width: 100%; min-width: 0; max-width: 390px; margin: 0 auto; }
+  .introducao { margin: 24px 16px; }
+  .search-container { max-width: calc(100% - 32px); min-width: 0; }
+  .search-input { min-width: 0; }
+
+  /* JOGOS — novo grid minimalista */
+  .jogos-container { margin: 28px auto 46px; padding: 0 16px; }
+  .cards-jogos-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .card-jogo-minimal { min-width: 0; }
+  .card-content { padding: 20px 18px; }
+  .card-thumb { height: 135px; }
+
+  /* CONTATO — duas colunas viram uma, inputs ficam visiveis */
+  .contact-layout { padding: 28px 16px 38px; }
+  .contact-container { align-items: stretch; }
+  .contact-form-card, .side-card { padding: 20px 16px; }
+  .field-row { flex-direction: column; gap: 0; }
+  .field-row label, .field-full { min-width: 0; }
+  .contact-form-card input,
+  .contact-form-card select,
+  .contact-form-card textarea { max-width: 100%; min-width: 0; }
+  .contact-team-member { min-width: 0; padding: 12px; gap: 12px; }
+  .contact-team-member > div,
+  .contact-item > div { min-width: 0; overflow-wrap: anywhere; }
+
+  /* MODAL DOS JOGOS — permitimos rolagem vertical em vez de cortar.
+     O CSS original fixa 900x560 e aplica overflow:hidden. */
+  .modal-overlay {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    padding: 8px;
+    align-items: center;
+    overflow: hidden;
+  }
+  .modal-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-radius: 16px;
+  }
+  .modal-close-btn {
+    position: sticky;
+    top: 7px;
+    right: auto;
+    align-self: flex-end;
+    flex: none;
+    margin: 7px 8px -31px 0;
+    width: 32px;
+    height: 32px;
+    background: #ffffff !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1) !important;
+    z-index: 40;
+  }
+  .modal-game-content {
+    flex: none;
+    height: auto;
+    min-height: 0;
+    padding: 44px 14px 18px;
+    overflow: visible;
+    align-items: stretch;
+  }
+  .modal-game-content > * {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex: none;
+  }
+
+  /* Quiz dentro do modal */
+  .modal-game-content .quiz-page-wrapper,
+  .modal-game-content .quiz-container { height: auto; min-height: 0; }
+  .modal-game-content .quiz-body-layout {
+    grid-template-columns: minmax(0,1fr);
+    gap: 15px;
+  }
+  .modal-game-content .video-wrapper {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 16 / 9;
+  }
+  .modal-game-content .video-libras-quiz { width: 100%; height: 100%; object-fit: contain; }
+  .modal-game-content .btn-opcao { padding: 11px 12px; }
+
+  /* Arrasta e Solta: colunas empilhadas. CSS nao implementa drag por toque. */
+  .modal-game-content .arrasta-page-wrapper,
+  .modal-game-content .arrasta-container-main { height: auto; min-height: 0; }
+  .modal-game-content .arrasta-grid-game {
+    grid-template-columns: minmax(0,1fr);
+    gap: 14px;
+  }
+  .modal-game-content .sign-area,
+  .modal-game-content .drop-area { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .modal-game-content .sign-tile,
+  .modal-game-content .drop-zone { height: 110px; min-width: 0; }
+
+  /* Descubra pelo Video: opcoes visiveis uma embaixo da outra */
+  .modal-game-content .descubra-wrapper,
+  .modal-game-content .descubra-container { height: auto; min-height: 0; }
+  .modal-game-content .options-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .modal-game-content .option-card { height: 165px; }
+  .modal-game-content .video-option { object-fit: contain; }
+
+  .video-zoom-overlay { padding: 12px; }
+  .video-zoom-box { max-width: 100%; }
+  .video-zoomed { width: 100%; height: auto; max-height: 75dvh; object-fit: contain; }
+}
+
+@media (max-width: 360px) {
+  header.main-header { padding-inline: 8px; }
+  header.main-header .nav-links { gap: 2px; }
+  header.main-header .nav-links a { font-size: 10.5px; padding: 5px 1px; }
+  .home-hero-content h1 { font-size: 1.85rem; }
+  .hero-feature-card { font-size: 12px; padding: 8px 10px; }
+  .home-hero-image { max-width: 260px; }
+  .contact-team-member img { width: 42px; height: 42px; }
+  .modal-game-content { padding-inline: 10px; }
+}
