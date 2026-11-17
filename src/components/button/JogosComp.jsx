@@ -31,7 +31,6 @@ export default function JogosVideos() {
 
   return (
     <>
-      <Header />
       <div className="jogos-wrapper">
         {/* Título principal */}
         <section className="titulo-principal">
