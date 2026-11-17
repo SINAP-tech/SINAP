@@ -1,0 +1,318 @@
+/* SINAP — ajustes responsivos iniciais (sem mudanças no desktop)
+   Importe DEPOIS dos demais CSS, de preferência ao final do main.jsx.
+   Este arquivo não substitui os estilos existentes.
+*/
+
+@media (max-width: 768px) {
+  /* Evita que mídias ultrapassem os seus próprios contêineres. */
+  img, video, iframe {
+    max-width: 100%;
+  }
+
+  /* NAVBAR compartilhada: organiza logo e links em duas linhas. */
+  header.header {
+    position: sticky;
+    top: 0;
+    left: auto;
+    z-index: 998;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  header.header .header-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    line-height: normal;
+  }
+
+  header.header .header-logo {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  header.header .header-title {
+    font-size: 19px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  header.header .header-subtitle {
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 2px 0 0;
+  }
+
+  header.header .nav-links {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 14px;
+    text-align: center;
+  }
+
+  header.header .nav-links a {
+    margin: 0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* HOME: banner em uma coluna e sem largura fixa. */
+  .banner {
+    margin-top: 0;
+    padding: 32px 16px;
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .banner-text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .banner #h {
+    font-size: clamp(2rem, 9vw, 2.9rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  .banner #pp {
+    font-size: 1rem;
+  }
+
+  .BannerHomeImage {
+    width: 100%;
+    max-width: 480px;
+    min-width: 0;
+  }
+
+  .BannerHomeImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .banner-icons,
+  .chips,
+  .inclusao-badges,
+  .footer-badges {
+    flex-wrap: wrap;
+  }
+
+  .inclusao-section {
+    width: calc(100% - 32px);
+    margin: 24px auto;
+    padding: 24px 16px;
+  }
+
+  .features-section {
+    padding: 28px 16px;
+  }
+
+  .features-section .feature-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Seção Sobre nós: evita largura/altura rígidas. */
+  .Sobre-nos {
+    width: 100%;
+    height: auto;
+    padding: 32px 16px;
+  }
+
+  .SecLayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .SecLayer .card-sobrenos {
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+    height: auto;
+    flex: 0 1 auto;
+    padding: 24px 16px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .card-sobrenos .images-ph {
+    width: 72px;
+    height: 72px;
+    flex: none;
+    object-fit: cover;
+  }
+
+  .footer {
+    padding: 28px 16px;
+  }
+
+  .footer-top {
+    flex-wrap: wrap;
+  }
+
+  /* CONCEITOS e páginas dos vídeos */
+  .cabeca {
+    padding: 36px 16px;
+  }
+
+  .pag {
+    padding: 24px 16px;
+  }
+
+  .cards-container {
+    gap: 16px;
+  }
+
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 24px 16px;
+  }
+
+  .card-wrapper .card,
+  .cards-container .card {
+    width: 100%;
+    min-width: 0;
+    max-width: 480px;
+  }
+
+  .card-wrapper .video-frame iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .extra-secao {
+    margin-top: 28px;
+    padding: 28px 16px;
+  }
+
+  .extra-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .extra-item {
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+    margin: 0 auto;
+  }
+
+  .introducao {
+    margin: 24px 16px;
+  }
+
+  /* JOGOS: cards cabem até em celulares mais estreitos. */
+  .jogos-wrapper {
+    padding: 28px 16px 48px;
+  }
+
+  .titulo-principal h1 {
+    font-size: clamp(1.7rem, 7vw, 2rem);
+  }
+
+  .indicadores {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .indicador-box {
+    flex: 1 1 125px;
+    max-width: 170px;
+    padding: 14px 10px;
+  }
+
+  .cards-jogos {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .card-jogo {
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+    padding: 22px 18px;
+  }
+
+  .como-funciona-card {
+    padding: 24px 16px;
+  }
+
+  .funciona-item {
+    gap: 12px;
+  }
+
+  /* QUIZ DE PÁGINA — modal de Jogos pode usar outro componente/CSS. */
+  .quiz-page-wrapper {
+    padding: 28px 16px 40px;
+  }
+
+  .opcoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-box {
+    width: 100%;
+    padding: 28px 18px;
+  }
+
+  /* CONTATO: coloca formulário e informações um abaixo do outro. */
+  .pagina-contato {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .pagina-contato .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .pagina-contato .titulo-bloco,
+  .pagina-contato .form-bloco,
+  .pagina-contato .coluna-direita,
+  .pagina-contato .caixa {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .pagina-contato input:not([type="checkbox"]):not([type="radio"]),
+  .pagina-contato textarea,
+  .pagina-contato select {
+    max-width: 100%;
+  }
+}

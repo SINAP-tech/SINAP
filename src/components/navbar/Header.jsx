@@ -16,12 +16,13 @@ function Header() {
         </div>
       </div>
 
-      <nav className="nav-links">
-        <Link to="/">Home</Link> |
-        <Link to="/conceitos">Conceitos em Informática em Libras</Link> |
-        <Link to="/jogos">Jogos</Link> |
-        <Link to="/contato">Contato</Link> 
-      </nav>
+      
+        <nav className="nav-links" aria-label="Navegação principal">
+          <Link to="/">Início</Link>
+          <Link to="/conceitos">Aprender</Link>
+          <Link to="/jogos">Jogos</Link>
+          <Link to="/contato">Contato</Link>
+        </nav>
     </header>
   );
 }
